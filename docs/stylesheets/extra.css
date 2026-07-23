@@ -1,0 +1,6 @@
+/* Project-specific style overrides. Keep this light — prefer theme options in
+   mkdocs.yml where possible. */
+
+:root {
+  --md-admonition-icon--roadmap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg>');
+}

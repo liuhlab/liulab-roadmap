@@ -1,0 +1,28 @@
+# MkDocs build output
+/site/
+
+# Pixi (commit pixi.lock, ignore the solved env)
+.pixi/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.Python
+
+# Node (markdownlint tooling, if installed locally)
+node_modules/
+package-lock.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Environment
+.env

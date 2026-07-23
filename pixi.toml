@@ -1,0 +1,32 @@
+# Pixi manifest — local dev environment for building the docs site.
+# Install pixi: https://pixi.sh   |   then run `pixi install`.
+#
+# Common commands:
+#   pixi run serve   # live-reloading preview at http://127.0.0.1:8000
+#   pixi run build   # strict build into site/ (mirrors CI)
+#   pixi run lint    # markdownlint over docs/
+
+[workspace]
+name = "liulab-roadmap"
+# CalVer: YYYY.M.D
+version = "2026.7.23"
+description = "Curated roadmaps, tutorials, and learning materials for the Liu Lab."
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+[dependencies]
+python = ">=3.12"
+mkdocs-material = ">=9.5"
+
+# markdownlint-cli2 ships via npm; pixi provides node so `pixi run lint` works
+# without a separate global install.
+nodejs = ">=20"
+
+[pypi-dependencies]
+# Not packaged on conda-forge — pull from PyPI.
+mkdocs-static-i18n = ">=1.2"
+
+[tasks]
+serve = "mkdocs serve"
+build = "mkdocs build --strict"
+lint = "npx --yes markdownlint-cli2 \"docs/**/*.md\" \"*.md\""

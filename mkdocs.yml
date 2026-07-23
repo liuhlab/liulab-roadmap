@@ -1,0 +1,102 @@
+# =============================================================================
+# Liu Lab Roadmap — MkDocs configuration
+# =============================================================================
+# Docs live in docs/. Bilingual content (English + 简体中文) is handled by the
+# mkdocs-static-i18n plugin using the "suffix" file convention:
+#   docs/foo.md      -> English (default locale)
+#   docs/foo.zh.md   -> 简体中文
+# A language switcher appears in the top bar automatically.
+# =============================================================================
+
+site_name: Liu Lab Roadmap
+site_description: Curated roadmaps, tutorials, and learning materials for the Liu Lab.
+site_author: Liu Lab
+
+site_url: https://liuhlab.github.io/liulab-roadmap/
+repo_url: https://github.com/liuhlab/liulab-roadmap
+repo_name: liuhlab/liulab-roadmap
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  features:
+    # NOTE: navigation.instant is intentionally omitted — it breaks the
+    # mkdocs-static-i18n language switcher's contextual links.
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 简体中文
+          build: true
+          site_name: 刘实验室路线图
+          nav_translations:
+            Home: 首页
+
+# Keep the nav minimal for now — sections will be added as content lands.
+nav:
+  - Home: index.md
