@@ -67,10 +67,10 @@ CSS variables so dark mode works. Always write alt text, prefer language-neutral
 figures, and attribute anything taken from a paper.
 
 **Cross-linking, glossary, citations** — Link internally at every opportunity;
-dense linking is what turns pages into a map. Glossary = hover tooltips, not
-click-jumps (`abbr` + `pymdownx.snippets` over `includes/glossary.md`).
-Citations = BibTeX + `mkdocs-bibtex`, `[@key]` inline, resolving to DOI/PubMed.
-*Glossary and citation tooling are not yet enabled — wire up on first need.*
+dense linking is what turns pages into a map. Glossary = hover tooltips on first
+use per page via `hooks/glossary.py` + `includes/glossary{,.zh}.md` (not `abbr`
+— its `\b` matching fails on Chinese); a concept with its own page gets a link,
+not an entry. Mermaid fences work. Citations (`mkdocs-bibtex`) not yet wired up.
 
 ## Gotchas
 

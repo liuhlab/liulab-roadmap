@@ -29,6 +29,7 @@ theme:
     - navigation.footer
     - navigation.indexes
     - toc.follow
+    - content.tooltips
     - search.suggest
     - search.highlight
     - content.action.edit
@@ -56,6 +57,15 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  # Vendored mermaid so diagrams render without reaching unpkg.com (readers
+  # behind the GFW get a blank figure otherwise). Material only fetches its own
+  # copy from the CDN when `window.mermaid` is still undefined, so loading ours
+  # first wins. `defer` runs it before DOMContentLoaded, which is when Material
+  # mounts the diagrams.
+  - path: assets/javascripts/mermaid.min.js
+    defer: true
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -65,7 +75,13 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        # ```mermaid fences -> diagrams. Material bundles mermaid.js and themes
+        # it for light/dark automatically; no external script.
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -74,6 +90,12 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Glossary hover tooltips: wraps the first occurrence of each term from
+# includes/glossary{,.zh}.md in <abbr>. See the module docstring for why the
+# stock `abbr` extension can't be used here.
+hooks:
+  - hooks/glossary.py
 
 plugins:
   - search:
@@ -130,6 +152,7 @@ nav:
       - 3-experimental/3.4-genomics.md
       - 3-experimental/3.5-single-cell-omics.md
       - 3-experimental/3.6-bioinformatics.md
+      - 3-experimental/3.7-r-statistics.md
   - AI Model Foundations:
       - 4-ai-models/4.1-data-science-ml.md
       - 4-ai-models/4.2-deep-learning.md

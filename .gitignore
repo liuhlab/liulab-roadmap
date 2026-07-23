@@ -26,3 +26,6 @@ Thumbs.db
 
 # Environment
 .env
+
+# Playwright MCP scratch output
+.playwright-mcp/
