@@ -21,6 +21,11 @@ pixi run build   # strict build; CI runs this — do it before calling a change 
 pixi run lint    # markdownlint
 ```
 
+A clean build says nothing about how a page *looks*. For anything visual
+(Mermaid, CSS figures, tooltips) serve `site/` on a port and check it in a
+browser, light and dark, before calling it done. Commit and push only when
+asked — not after every edit.
+
 ## Structure & conventions
 
 - Content in `docs/`; images in `docs/assets/`.
@@ -45,9 +50,12 @@ pixi run lint    # markdownlint
 Read this before authoring any page.
 
 **Audience & voice** — Write for entry-level students (incoming PhDs, senior
-undergrads, master's) with no background in the topic. Lay, friendly, human.
-Define every term and acronym on first use. Lead with intuition and why it
-matters, not mechanism.
+undergrads, master's) with no background in the topic. Talk to peers, not down
+to pupils: share what worked ("多数时候我们…"), don't instruct ("你应该…",
+"别跳过…"). Define every term on first use; lead with intuition, not mechanism.
+No AI voice: no em dashes (中文破折号同理), no `**bold lead-in:**` bullets, no
+rhetorical-question openers, no compulsive rule of three. Vary sentence length,
+hold an opinion, and audit with the `avoid-ai-writing` skill before shipping.
 
 **A page is a roadmap, not a textbook** — Mostly a catalog and map: point to the
 best learning materials and show how concepts, learning stages, and resources
@@ -59,12 +67,11 @@ Link out instead of inlining depth. Web-search for the best existing writing and
 add **Further reading**; propose candidates to the user rather than picking
 silently.
 
-**Figures** — Aim for 图文并茂: a good diagram is often the fastest path to
-intuition. But no decorative or redundant images — if removing a figure doesn't
-hurt understanding, cut it. Prefer code-authored vectors (inline SVG, HTML/CSS,
-Mermaid) over PNGs: editable, diff-able, and theme-aware — use `currentColor` or
-CSS variables so dark mode works. Always write alt text, prefer language-neutral
-figures, and attribute anything taken from a paper.
+**Figures** — Aim for 图文并茂, but cut any figure whose removal doesn't hurt
+understanding. Prefer code-authored vectors (inline SVG, HTML/CSS, Mermaid) over
+PNGs: editable, diff-able, theme-aware — use `currentColor` or CSS variables so
+dark mode works. Write alt text, prefer language-neutral figures, attribute
+anything taken from a paper.
 
 **Cross-linking, glossary, citations** — Link internally at every opportunity;
 dense linking is what turns pages into a map. Glossary = hover tooltips on first
@@ -75,6 +82,10 @@ not an entry. Mermaid fences work. Citations (`mkdocs-bibtex`) not yet wired up.
 ## Gotchas
 
 - Don't re-add `navigation.instant` — it breaks the language switcher.
+- Material lazy-loads Mermaid from unpkg; we vendor it (`extra_javascript`,
+  `defer`) so readers behind the GFW see diagrams. Don't drop it.
+- Mermaid ignores `direction` inside a subgraph that has edges to another
+  subgraph. Lay figures out as a spine plus fan-out instead.
 - `mkdocs-static-i18n` is PyPI-only → `[pypi-dependencies]` in `pixi.toml`.
 - Empty dirs need a `.gitkeep`, or `custom_dir`-style config breaks in CI.
 - `pixi.toml` version uses CalVer (`YYYY.M.D`).
