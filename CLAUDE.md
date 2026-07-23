@@ -93,6 +93,27 @@ Read it before writing content.
   curated links. When drafting, surface candidate resources to the user for
   approval rather than silently picking.
 
+### Figures & visuals
+
+- **Aim for 图文并茂 — text and images working together.** Sometimes one figure
+  genuinely is worth a thousand words: a concept diagram, a workflow, a
+  before/after comparison, the anatomy of a method. At those moments a figure is
+  the fastest path to intuition, and it's exactly what this site should use.
+- **But don't overuse or abuse images.** Decorative pictures, stock photos, or a
+  figure that just restates the sentence next to it add visual noise and loading
+  time without helping the reader.
+- **The test:** would removing this figure make the page harder to understand?
+  If yes, keep it. If not, cut it.
+- Practical points:
+  - Store images under `docs/assets/` (add per-section subfolders as it grows).
+  - Always write meaningful alt text, and add a short caption when the figure
+    needs context.
+  - Prefer **language-neutral figures** so one image serves both locales. If a
+    figure must contain text, either make a per-language version or keep the
+    explanation in the caption (captions are translated anyway).
+  - Don't lift figures from papers without attribution — cite the source (see
+    citations below).
+
 ### Cross-linking, glossary & citations
 
 - **Cross-link aggressively.** Whenever a page mentions a concept covered
