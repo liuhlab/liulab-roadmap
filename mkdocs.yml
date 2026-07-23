@@ -95,8 +95,55 @@ plugins:
           build: true
           site_name: 实验室学习路线
           nav_translations:
+            # Only section (grouping) labels need translation here — page titles
+            # come from each file's own H1, so index.md/index.zh.md self-localize.
             Home: 首页
+            Foundational Skills: 基本技能
+            Biology Foundations: 生物学基础
+            Experimental Techniques: 实验技术基础
+            AI Model Foundations: 人工智能模型基础
+            Lab Code & Tools: 实验室代码和工具
+            Datasets: 实验室和公共数据集
+            How To: 如何做
+            Interesting Labs: 有趣的实验室
+            Journal Club: 文献俱乐部
 
-# Keep the nav minimal for now — sections will be added as content lands.
+# Nav structure:
+#   L1 = section (grouping header, not a page)
+#   L2 = overview page
+#   L3 = specific direction (add later; nest a page under an index.md and the
+#        section-index feature makes the L2 overview clickable — see docs below)
 nav:
   - Home: index.md
+  - Foundational Skills:
+      - basics/llm-agents.md
+      - basics/linux-git.md
+      - basics/python.md
+  - Biology Foundations:
+      - biology/molecular-epigenetics.md
+      - biology/neurobiology.md
+      - biology/neurodegeneration-aging.md
+  - Experimental Techniques:
+      - experimental/molecular-biology-techniques.md
+      - experimental/genome-editing-delivery.md
+      - experimental/cell-animal-models.md
+      - experimental/genomics.md
+      - experimental/single-cell-omics.md
+      - experimental/bioinformatics.md
+  - AI Model Foundations:
+      - ai-models/deep-learning.md
+      - ai-models/genome-sequence-models.md
+      - ai-models/protein-models.md
+      - ai-models/cell-state-models.md
+      - ai-models/ai-scientist.md
+  - Lab Code & Tools:
+      - lab-code/routine-support.md
+      - lab-code/research-projects.md
+  - Datasets:
+      - datasets/index.md
+  - How To:
+      - how-to/index.md
+  - Interesting Labs:
+      - interesting-labs/index.md
+  - Journal Club:
+      - journal-club/index.md
