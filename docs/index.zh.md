@@ -12,4 +12,5 @@
 
 本站使用 Markdown 编写，并由 [MkDocs](https://www.mkdocs.org/) 和
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 构建。
-关于如何在本地预览改动，请参阅 `README.md`。
+关于如何在本地预览改动，请参阅
+[README](https://github.com/liuhlab/liulab-roadmap/blob/main/README.md)。
