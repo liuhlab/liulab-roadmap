@@ -104,6 +104,19 @@ Read it before writing content.
   time without helping the reader.
 - **The test:** would removing this figure make the page harder to understand?
   If yes, keep it. If not, cut it.
+- **"Figure" includes vector graphics generated from code, not just image
+  files.** Where it's convenient, author them as inline **SVG**, plain
+  **HTML/CSS**, or a **Mermaid** diagram. These are usually better than a PNG or
+  screenshot: they stay editable and diff-able in git, scale crisply at any
+  zoom, and can adapt to the site's light/dark themes.
+  - Inline SVG and HTML/CSS work today (`attr_list` and `md_in_html` are
+    already enabled).
+  - Make them **theme-aware**: use `currentColor` or the theme's CSS variables
+    rather than hard-coded black/white, so the figure stays legible in dark
+    mode.
+  - Mermaid (` ```mermaid ` fences) needs one small `pymdownx.superfences`
+    custom-fence addition in `mkdocs.yml` — *not yet enabled*; turn it on when
+    the first diagram needs it.
 - Practical points:
   - Store images under `docs/assets/` (add per-section subfolders as it grows).
   - Always write meaningful alt text, and add a short caption when the figure
