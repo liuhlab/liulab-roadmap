@@ -1,7 +1,7 @@
 r"""Glossary hover tooltips.
 
-Wraps the *first* occurrence of each glossary term on a page in ``<abbr>``,
-which Material renders as a hover tooltip (theme feature ``content.tooltips``).
+Wraps *every* occurrence of each glossary term on a page in ``<abbr>``, which
+Material renders as a hover tooltip (theme feature ``content.tooltips``).
 
 Terms live in ``includes/glossary.md`` (English) and ``includes/glossary.zh.md``
 (中文) — same suffix convention as ``docs/`` — written in the familiar
@@ -72,15 +72,15 @@ def on_config(config):
     return config
 
 
-def _wrap(text: str, unused: dict[str, str]) -> str:
-    if not unused or not text.strip():
+def _wrap(text: str, terms: dict[str, str]) -> str:
+    if not terms or not text.strip():
         return text
-    pattern = re.compile("|".join(_pattern_for(term) for term in unused))
+    pattern = re.compile("|".join(_pattern_for(term) for term in terms))
 
     def repl(match: re.Match) -> str:
         matched = match.group(0)
-        key = matched if matched in unused else matched[:-1]  # drop plural "s"
-        definition = unused.pop(key, None)  # None => already used on this page
+        key = matched if matched in terms else matched[:-1]  # drop plural "s"
+        definition = terms.get(key)
         if definition is None:
             return matched
         return f'<abbr title="{escape(definition, quote=True)}">{matched}</abbr>'
@@ -90,11 +90,11 @@ def _wrap(text: str, unused: dict[str, str]) -> str:
 
 def on_page_markdown(markdown, page, config, files):
     locale = "zh" if page.file.src_uri.endswith(".zh.md") else "en"
-    unused = dict(_terms.get(locale, {}))
+    terms = _terms.get(locale, {})
     out, pos = [], 0
     for skipped in SKIP.finditer(markdown):
-        out.append(_wrap(markdown[pos : skipped.start()], unused))
+        out.append(_wrap(markdown[pos : skipped.start()], terms))
         out.append(skipped.group(0))
         pos = skipped.end()
-    out.append(_wrap(markdown[pos:], unused))
+    out.append(_wrap(markdown[pos:], terms))
     return "".join(out)

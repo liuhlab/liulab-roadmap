@@ -52,3 +52,7 @@ Two rules:
 *[coding agent]: A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions
 *[harness]: The tools, context management and execution environment wrapped around a model to make it an agent; Claude Code is the harness, Claude is the model inside it
 *[MCP]: An open standard, now stewarded by the Linux Foundation, that lets any agent connect to outside systems such as databases through one common interface
+*[diff]: The exact line-by-line changes between two versions of a file, which is what git shows you and what lets you undo them
+*[SSH]: A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster
+*[HPC cluster]: A shared high-performance computing system of many networked machines you send heavy jobs to, instead of running them on your laptop
+*[login node]: The shared entry-point machine you land on when you connect to a cluster, meant for editing and submitting jobs rather than running heavy computation
