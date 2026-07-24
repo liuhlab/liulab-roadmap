@@ -49,6 +49,12 @@ asked — not after every edit.
 
 Read this before authoring any page.
 
+**Where a page starts** — A filled-in `.github/ISSUE_TEMPLATE/new-page.yml`
+issue. Its fields are raw material, not an outline to transcribe: reorder, cut
+what doesn't earn its place, research the gaps. Sparse fields mean drafting
+more, not writing less. Always keep the issue's opinions and lab experience —
+that is the part no search can supply.
+
 **Audience & voice** — Write for entry-level students (incoming PhDs, senior
 undergrads, master's) with no background in the topic. Talk to peers, not down
 to pupils: share what worked ("多数时候我们…"), don't instruct ("你应该…",

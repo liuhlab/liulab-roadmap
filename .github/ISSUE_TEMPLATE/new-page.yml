@@ -1,0 +1,66 @@
+name: New page
+description: Bullets, links and opinions for a page. A full draft gets written from them.
+title: "[Page] "
+labels: ["new-page"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The page title goes in the issue title. Bullets are plenty, prose is not
+        needed, English or Chinese both work.
+
+  - type: input
+    id: placement
+    attributes:
+      label: Where does it go?
+      description: A path, or a position relative to an existing page.
+      placeholder: after 4.2-deep-learning · docs/7-how-to/pixi.md · somewhere in section 3, your call
+    validations:
+      required: true
+
+  - type: input
+    id: take
+    attributes:
+      label: The take
+      description: The one thing a reader should leave with. Pages here argue something.
+      placeholder: Worth learning properly, but so you can read methods sections, not so you can train models.
+    validations:
+      required: true
+
+  - type: textarea
+    id: material
+    attributes:
+      label: Bullets, links and opinions
+      description: >
+        Roughly in the order a reader should meet them. Links plus what you make of
+        them, what people get stuck on, how long things really take. The opinions
+        matter most, they're the part that can't be looked up.
+      placeholder: |
+        ## why bother
+        - papers assume the vocabulary, so methods sections become unreadable
+        - we use models more than we train them, and a model never says when it's guessing
+
+        ## following D2L
+        - https://d2l.ai/ : the main text, every section is a runnable notebook
+        - https://space.bilibili.com/1567748478/lists/358497 : Mu Li's lectures, 中文 only
+        - ch.11 is the hinge; most people stop there, but ch.12-14 is what you need
+          the week you first train something yourself
+        - the "from scratch" sections look like busywork, and skipping them leaves
+          backprop a black box
+        - ch.1-11 is two to three months at a couple of sections a week
+
+        ## where it goes next
+        - attention branches into LLMs, AlphaFold, AlphaGenome, cell-state models
+    validations:
+      required: true
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: Anything else
+      description: >
+        Optional. What to leave out, a deadline, who to check the science with,
+        anything you want handled a particular way.
+      placeholder: |
+        Leave the transformer walkthrough for its own page.
+        Wanted before the rotation students arrive in September.
