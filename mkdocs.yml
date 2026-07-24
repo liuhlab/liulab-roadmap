@@ -66,6 +66,15 @@ extra_javascript:
   - path: assets/javascripts/mermaid.min.js
     defer: true
 
+extra:
+  # Google Analytics 4. Material injects the gtag.js snippet into both language
+  # builds from this one block. Note: the gtag script loads from
+  # googletagmanager.com, which the GFW blocks — mainland-China readers are not
+  # counted here. Host-side (Tencent Cloud CDN) stats cover them instead.
+  analytics:
+    provider: google
+    property: G-6M1CJF9WXY
+
 markdown_extensions:
   - admonition
   - attr_list
