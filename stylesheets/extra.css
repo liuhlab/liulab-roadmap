@@ -1,0 +1,73 @@
+/* Project-specific style overrides. Keep this light — prefer theme options in
+   mkdocs.yml where possible. */
+
+:root {
+  --md-admonition-icon--roadmap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg>');
+}
+
+/* Last-updated stamp. The theme prints a clock icon and a bare date, hiding
+   the words "Last update" in a hover tooltip — no use on a phone. Spell it
+   out; `lang` is set per locale, so the two builds pick their own label. */
+
+.md-source-file__fact .git-revision-date-localized-plugin::before {
+  content: "Last update: ";
+}
+
+html[lang="zh"] .md-source-file__fact .git-revision-date-localized-plugin::before {
+  content: "最后更新：";
+}
+
+/* Tier map — stacked bands showing which parts of a course are essential,
+   core, or optional. Colours come from theme tokens so dark mode follows. */
+
+.tier-map {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 1.4em 0;
+}
+
+.tier-map .tier {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  padding: 0.55rem 0.9rem;
+  border-left: 0.2rem solid var(--md-default-fg-color--lighter);
+  border-radius: 0.1rem;
+  background: var(--md-code-bg-color);
+}
+
+/* Border weight ramps down from trunk to supporting chapters. */
+.tier-map .tier--base { border-left-color: var(--md-primary-fg-color); }
+.tier-map .tier--models { border-left-color: var(--md-accent-fg-color); border-left-width: 0.35rem; }
+.tier-map .tier--train { border-left-color: var(--md-default-fg-color--light); }
+.tier-map .tier--history { border-left-color: var(--md-default-fg-color--lighter); }
+
+.tier-map .tier__head {
+  flex: 0 0 6rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.tier-map .tier__head span {
+  display: block;
+  color: var(--md-default-fg-color--light);
+}
+
+.tier-map .tier__body {
+  flex: 1 1 16rem;
+  font-size: 0.72rem;
+  line-height: 1.65;
+}
+
+.tier-map .tier__body em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+}
+
+.tier-map figcaption {
+  margin-top: 0.2rem;
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+}

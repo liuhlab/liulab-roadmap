@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/1-basics/1.1-llm-agents/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.1-llm-agents/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.1-llm-agents/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/1-basics/1.2-linux-git/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.2-linux-git/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.2-linux-git/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/1-basics/1.3-python/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.3-python/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.3-python/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/2-biology/2.1-molecular-epigenetics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.1-molecular-epigenetics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.1-molecular-epigenetics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/2-biology/2.2-neurobiology/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.2-neurobiology/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.2-neurobiology/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/2-biology/2.3-neurodegeneration-aging/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.3-neurodegeneration-aging/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.3-neurodegeneration-aging/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.1-molecular-biology-techniques/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.1-molecular-biology-techniques/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.1-molecular-biology-techniques/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.2-genome-editing-delivery/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.2-genome-editing-delivery/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.2-genome-editing-delivery/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.3-cell-animal-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.3-cell-animal-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.3-cell-animal-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.4-genomics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.4-genomics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.4-genomics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.5-single-cell-omics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.5-single-cell-omics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.5-single-cell-omics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.6-bioinformatics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.6-bioinformatics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.6-bioinformatics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/3-experimental/3.7-r-statistics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.7-r-statistics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.7-r-statistics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.1-data-science-ml/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.1-data-science-ml/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.1-data-science-ml/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.2-deep-learning/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.2-deep-learning/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.2-deep-learning/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.3-genome-sequence-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.3-genome-sequence-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.3-genome-sequence-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.4-protein-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.4-protein-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.4-protein-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.5-cell-state-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.5-cell-state-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.5-cell-state-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.6-ai-scientist/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.6-ai-scientist/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.6-ai-scientist/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.1-routine-support/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.1-routine-support/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.1-routine-support/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.2-research-projects/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.2-research-projects/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.2-research-projects/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/6-datasets/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/6-datasets/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/6-datasets/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/7-how-to/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/8-interesting-labs/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/8-interesting-labs/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/8-interesting-labs/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/9-journal-club/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/9-journal-club/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/9-journal-club/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.1-llm-agents/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.1-llm-agents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.1-llm-agents/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.2-linux-git/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.2-linux-git/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.2-linux-git/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.3-python/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/1-basics/1.3-python/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/1-basics/1.3-python/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.1-molecular-epigenetics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.1-molecular-epigenetics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.1-molecular-epigenetics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.2-neurobiology/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.2-neurobiology/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.2-neurobiology/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.3-neurodegeneration-aging/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/2-biology/2.3-neurodegeneration-aging/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/2-biology/2.3-neurodegeneration-aging/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.1-molecular-biology-techniques/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.1-molecular-biology-techniques/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.1-molecular-biology-techniques/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.2-genome-editing-delivery/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.2-genome-editing-delivery/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.2-genome-editing-delivery/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.3-cell-animal-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.3-cell-animal-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.3-cell-animal-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.4-genomics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.4-genomics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.4-genomics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.5-single-cell-omics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.5-single-cell-omics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.5-single-cell-omics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.6-bioinformatics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.6-bioinformatics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.6-bioinformatics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.7-r-statistics/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/3-experimental/3.7-r-statistics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/3-experimental/3.7-r-statistics/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.1-data-science-ml/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.1-data-science-ml/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.1-data-science-ml/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.2-deep-learning/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.2-deep-learning/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.2-deep-learning/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.3-genome-sequence-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.3-genome-sequence-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.3-genome-sequence-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.4-protein-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.4-protein-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.4-protein-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.5-cell-state-models/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.5-cell-state-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.5-cell-state-models/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.6-ai-scientist/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/4-ai-models/4.6-ai-scientist/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.6-ai-scientist/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.1-routine-support/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.1-routine-support/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.1-routine-support/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.2-research-projects/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/5-lab-code/5.2-research-projects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/5-lab-code/5.2-research-projects/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/6-datasets/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/6-datasets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/6-datasets/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/8-interesting-labs/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/8-interesting-labs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/8-interesting-labs/"/>
+    </url>
+    <url>
+        <loc>https://liuhlab.github.io/liulab-roadmap/zh/9-journal-club/</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://liuhlab.github.io/liulab-roadmap/zh/9-journal-club/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://liuhlab.github.io/liulab-roadmap/9-journal-club/"/>
+    </url>
+</urlset>

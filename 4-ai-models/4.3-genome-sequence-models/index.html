@@ -1,0 +1,2335 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curated roadmaps, tutorials, and learning materials for the Liu Lab.">
+      
+      
+        <meta name="author" content="Liu Lab">
+      
+      
+        <link rel="canonical" href="https://liuhlab.github.io/liulab-roadmap/4-ai-models/4.3-genome-sequence-models/">
+      
+      
+        <link rel="prev" href="../4.2-deep-learning/">
+      
+      
+        <link rel="next" href="../4.4-protein-models/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../zh/4-ai-models/4.3-genome-sequence-models/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Genome Sequence Models - Liu Lab Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genome-sequence-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liu Lab Roadmap" class="md-header__button md-logo" aria-label="Liu Lab Roadmap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liu Lab Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Genome Sequence Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh/4-ai-models/4.3-genome-sequence-models/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/liuhlab/liulab-roadmap" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liuhlab/liulab-roadmap
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liu Lab Roadmap" class="md-nav__button md-logo" aria-label="Liu Lab Roadmap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Liu Lab Roadmap
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/liuhlab/liulab-roadmap" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liuhlab/liulab-roadmap
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundational Skills
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Foundational Skills
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-basics/1.1-llm-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Language Models &amp; Agent Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-basics/1.2-linux-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux, Git &amp; GitHub Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-basics/1.3-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biology Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Biology Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-biology/2.1-molecular-epigenetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Molecular Biology &amp; Epigenetics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-biology/2.2-neurobiology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neurobiology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-biology/2.3-neurodegeneration-aging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neurodegeneration &amp; Aging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experimental Techniques
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Experimental Techniques
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.1-molecular-biology-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Molecular Biology Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.2-genome-editing-delivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genome Editing &amp; Delivery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.3-cell-animal-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell &amp; Animal Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.4-genomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genomics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.5-single-cell-omics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single-Cell Omics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.6-bioinformatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-experimental/3.7-r-statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R &amp; Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Model Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Model Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.1-data-science-ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Science &amp; Machine Learning Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.2-deep-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genome Sequence Models
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genome Sequence Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-these-models-actually-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What these models actually do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-field-got-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the field got here
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-got-better-and-what-hasnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What got better, and what hasn't
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-labels-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the labels come from
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-trust-it-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you can trust it for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-dna-not-just-reading-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing DNA, not just reading it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-lab-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the lab fits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting started
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.4-protein-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protein Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.5-cell-state-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell-State Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.6-ai-scientist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Scientist Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Code & Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab Code & Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-lab-code/5.1-routine-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routine Lab Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-lab-code/5.2-research-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Projects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../6-datasets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datasets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../7-how-to/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How To
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How To
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../7-how-to/7.1-llm-agents/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM & Agents
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LLM & Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing This Site With Claude Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../8-interesting-labs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interesting Labs
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interesting Labs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../9-journal-club/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Journal Club
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Journal Club
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-these-models-actually-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What these models actually do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-field-got-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the field got here
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-got-better-and-what-hasnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What got better, and what hasn't
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-labels-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the labels come from
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-trust-it-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you can trust it for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-dna-not-just-reading-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing DNA, not just reading it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-lab-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the lab fits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting started
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/liuhlab/liulab-roadmap/edit/main/docs/4-ai-models/4.3-genome-sequence-models.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="genome-sequence-models">Genome Sequence Models<a class="headerlink" href="#genome-sequence-models" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">AI-generated draft, not yet human-reviewed</p>
+<p>An AI agent wrote this whole page. A human has not yet checked or revised it, so treat everything here, the numbers and citations most of all, as provisional until this notice comes down.</p>
+</div>
+<p>A genome sequence model learns the link between a stretch of DNA and what that DNA does. That link runs two ways. Reading it means taking a sequence and predicting a measurement somebody made on it, how open the chromatin is, where a protein binds, how much RNA gets made. Writing it means starting from a functional goal and designing a sequence that meets it, a synthetic enhancer that fires in one cell type and stays silent everywhere else. Most of the field, and most of this page, is about reading; design turns out to be largely the reading model run backwards, and it gets its own section near the end.</p>
+<p>Ten years of work stretched the reading models' input window from about a hundred bases to a full megabase. What that mostly bought was better ranking, not better arithmetic: today's models sort candidate variants and regulatory elements sensibly and still understate how much any of them does. What limits them is not how much sequence they see, it is where their training labels came from. This page maps what the model reads, how the field got here, what actually improved, what you can trust it for, how the same machinery designs new DNA, and where the lab fits. It assumes <a href="../4.2-deep-learning/">Deep Learning Basics</a>; everything here is convolutions and <abbr title="A mechanism that lets a model decide, for each position, which other positions are worth looking at instead of treating them equally">attention</abbr> pointed at DNA.</p>
+<h2 id="what-these-models-actually-do">What these models actually do<a class="headerlink" href="#what-these-models-actually-do" title="Permanent link">&para;</a></h2>
+<p>Every model on this page has the same shape. DNA goes in, a measurement comes out. The interesting differences are how much DNA, how finely the output is resolved, and how many kinds of measurement.</p>
+<p>DNA is not numbers, so first it becomes numbers. Each base turns into a column of four slots with a 1 in the slot for A, C, G, or T and zeros elsewhere. A 1,000 bp window is a 4 × 1,000 matrix of ones and zeros. That <abbr title="Turning each DNA base into a column of four slots with a 1 in the A, C, G, or T slot and zeros elsewhere, so a sequence becomes a 4-by-length matrix a network can read">one-hot</abbr> matrix is the whole answer to "how does a sequence become a <abbr title="The n-dimensional array that holds all data and parameters in a neural network — a matrix with any number of axes">tensor</abbr>."</p>
+<p>The output is a stack of <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr>. A <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">track</abbr> is one number per genomic position, produced by one assay in one cell type, so when AlphaGenome reports 5,930 human <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr> that number is roughly assays times cell types. Four assays cover most of what these models predict: <abbr title="An assay that reads which stretches of DNA are open and accessible across the genome">ATAC-seq</abbr> and DNase read which stretches of DNA are open and accessible, <abbr title="An assay that reads where a particular protein sits on the genome">ChIP-seq</abbr> reads where a particular protein sits, <abbr title="An assay that reads where transcription starts, by capturing the 5&#x27; ends of RNAs">CAGE</abbr> reads where transcription starts, and RNA-seq reads how much transcript is present. The assays themselves live in <a href="../../3-experimental/3.4-genomics/">Genomics</a>, and the promoters, enhancers, and transcription factors they measure live in <a href="../../2-biology/2.1-molecular-epigenetics/">Molecular Biology &amp; Epigenetics</a>. The output is a grid of <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr> by bins, and the bin size is the resolution: a 128 bp bin means the model cannot resolve anything finer than 128 bp, which is why AlphaGenome predicting down to single bases is a change in kind, not just a bigger number.</p>
+<!-- noglossary -->
+<figure>
+<svg viewBox="0 0 720 250" role="img" aria-label="A DNA sequence becomes a four-row one-hot matrix; a model turns it into stacked coverage traces, one per assay and cell type, at a fixed bin resolution. Sliding a filter over the one-hot matrix is the same operation as scanning a position weight matrix." style="max-width:100%;height:auto;font-family:var(--md-text-font-family,sans-serif)">
+  <!-- Block A: sequence + one-hot matrix -->
+  <text x="115" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor" letter-spacing="6">ACGTGGCA</text>
+  <g font-size="11" fill="currentColor" text-anchor="middle">
+    <text x="24" y="53">A</text><text x="24" y="72">C</text><text x="24" y="91">G</text><text x="24" y="110">T</text>
+  </g>
+  <g stroke="var(--md-default-fg-color--lighter)" stroke-width="1" fill="none">
+    <rect x="38" y="44" width="152" height="76"/>
+    <line x1="57" y1="44" x2="57" y2="120"/><line x1="76" y1="44" x2="76" y2="120"/><line x1="95" y1="44" x2="95" y2="120"/><line x1="114" y1="44" x2="114" y2="120"/><line x1="133" y1="44" x2="133" y2="120"/><line x1="152" y1="44" x2="152" y2="120"/><line x1="171" y1="44" x2="171" y2="120"/>
+    <line x1="38" y1="63" x2="190" y2="63"/><line x1="38" y1="82" x2="190" y2="82"/><line x1="38" y1="101" x2="190" y2="101"/>
+  </g>
+  <!-- highlighted 1s along the diagonal-ish path A C G T G G C A -->
+  <g fill="var(--md-primary-fg-color)" opacity="0.16">
+    <rect x="38" y="44" width="19" height="19"/><rect x="57" y="63" width="19" height="19"/><rect x="76" y="82" width="19" height="19"/><rect x="95" y="101" width="19" height="19"/><rect x="114" y="82" width="19" height="19"/><rect x="133" y="82" width="19" height="19"/><rect x="152" y="63" width="19" height="19"/><rect x="171" y="44" width="19" height="19"/>
+  </g>
+  <g font-size="10" fill="currentColor" text-anchor="middle" opacity="0.85">
+    <text x="47" y="57">1</text><text x="66" y="76">1</text><text x="85" y="95">1</text><text x="104" y="114">1</text><text x="123" y="95">1</text><text x="142" y="95">1</text><text x="161" y="76">1</text><text x="180" y="57">1</text>
+  </g>
+  <text x="114" y="140" text-anchor="middle" font-size="10" fill="var(--md-default-fg-color--light)" data-i18n="onehot">4 × L one-hot matrix</text>
+  <!-- filter/PWM note -->
+  <rect x="76" y="44" width="38" height="57" fill="none" stroke="var(--md-accent-fg-color)" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="114" y="176" text-anchor="middle" font-size="10" fill="var(--md-accent-fg-color)" data-i18n="filter1">a filter sliding over one-hot DNA</text>
+  <text x="114" y="190" text-anchor="middle" font-size="10" fill="var(--md-accent-fg-color)" data-i18n="filter2">is a position weight matrix, learned</text>
+  <!-- arrow 1 -->
+  <g stroke="currentColor" stroke-width="1.4" fill="none"><line x1="200" y1="82" x2="238" y2="82"/><path d="M232 77 L240 82 L232 87"/></g>
+  <!-- Block B: model -->
+  <rect x="246" y="60" width="96" height="44" rx="6" fill="var(--md-code-bg-color)" stroke="currentColor" stroke-width="1.2"/>
+  <text x="294" y="86" text-anchor="middle" font-size="13" fill="currentColor" data-i18n="model">model</text>
+  <!-- arrow 2 -->
+  <g stroke="currentColor" stroke-width="1.4" fill="none"><line x1="348" y1="82" x2="404" y2="82"/><path d="M398 77 L406 82 L398 87"/></g>
+  <!-- Block C: tracks -->
+  <g font-size="10" fill="var(--md-default-fg-color--light)" text-anchor="end">
+    <text x="498" y="55" data-i18n="tr1">ATAC · cell A</text>
+    <text x="498" y="92" data-i18n="tr2">ATAC · cell B</text>
+    <text x="498" y="129" data-i18n="tr3">RNA-seq · cell A</text>
+  </g>
+  <g fill="var(--md-primary-fg-color)" opacity="0.7" stroke="none">
+    <path d="M506 58 L524 58 L532 42 L540 58 L566 58 L576 47 L586 58 L620 58 L628 46 L636 58 L706 58 L706 58 L506 58 Z"/>
+  </g>
+  <g fill="var(--md-accent-fg-color)" opacity="0.7" stroke="none">
+    <path d="M506 95 L548 95 L556 80 L564 95 L600 95 L610 86 L620 95 L706 95 L506 95 Z"/>
+  </g>
+  <g fill="var(--md-primary-fg-color)" opacity="0.45" stroke="none">
+    <path d="M506 132 L536 132 L546 110 L556 132 L640 132 L652 118 L664 132 L706 132 L506 132 Z"/>
+  </g>
+  <line x1="506" y1="138" x2="706" y2="138" stroke="currentColor" stroke-width="1"/>
+  <g font-size="9" fill="var(--md-default-fg-color--light)" text-anchor="middle">
+    <text x="540" y="152" data-i18n="bins">128 bp bins</text>
+    <text x="672" y="152" data-i18n="onebp">1 bp</text>
+  </g>
+  <g stroke="var(--md-default-fg-color--lighter)" stroke-width="1"><line x1="506" y1="140" x2="506" y2="144"/><line x1="540" y1="140" x2="540" y2="144"/><line x1="574" y1="140" x2="574" y2="144"/><line x1="608" y1="140" x2="608" y2="144"/><line x1="642" y1="140" x2="642" y2="144"/><line x1="676" y1="140" x2="676" y2="144"/></g>
+  <text x="606" y="182" text-anchor="middle" font-size="10" fill="var(--md-default-fg-color--light)" data-i18n="tracknote">one track = one assay × one cell type</text>
+</svg>
+<figcaption>DNA in, measured tracks out. Sliding a filter over the one-hot matrix is the same operation as scanning a motif, which is where a biologist's existing knowledge meets deep learning.</figcaption>
+</figure>
+<!-- /noglossary -->
+
+<p>That last point is the one place your existing knowledge maps exactly onto a <abbr title="A stack of simple numeric transformations whose parameters are learned from data rather than written by hand">neural network</abbr>. A <abbr title="A table of per-position base preferences for a binding motif; scanning it along a sequence is the same operation a convolution filter performs">position weight matrix</abbr> scanned along a sequence and a convolution filter applied to <abbr title="Turning each DNA base into a column of four slots with a 1 in the A, C, G, or T slot and zeros elsewhere, so a sequence becomes a 4-by-length matrix a network can read">one-hot</abbr> DNA are the same operation. The only difference is that a <abbr title="Position weight matrix: a table of per-position base preferences for a motif, scanned along a sequence exactly as a convolution filter is">PWM</abbr>'s weights are counted from known binding sites while a filter's weights are learned by <abbr title="The training loop itself: nudge every parameter a little in the direction that reduces the error, over and over">gradient descent</abbr>, which is why the first layer of the earliest model on this page looks like a set of <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motifs</abbr>. Scanning alone was never enough, though. Look for a transcription factor's <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motif</abbr> genome-wide and almost every hit is a place where nothing happens; whether a site does anything depends on the sequence around it, and that context is what a deep model buys you. This is old news, called the futility theorem back in <a href="https://doi.org/10.1038/nrg1315">2004</a>, and it is the problem the whole field exists to solve.</p>
+<p>One more idea makes the rest of the page legible. The number a paper advertises is its input length, but a model does not use all of it. Basenji reads a 131 kb window while any single output position only sees about 32 kb of it, its <abbr title="The stretch of input sequence that can actually influence one output position, usually far shorter than the window the model is fed">receptive field</abbr>, and as we will see even the <abbr title="The stretch of input sequence that can actually influence one output position, usually far shorter than the window the model is fed">receptive field</abbr> overstates what the model actually leans on. Variant effect prediction, finally, is not a separate kind of model. It is <code>predict(ALT) − predict(REF)</code> from a model that never saw a single variant during training, which is exactly why it can score a mutation nobody has ever observed, and exactly why nothing guarantees the difference it reports is causal.</p>
+<p>Before reading further, it helps to look at one. ENCODE's <a href="https://screen.wenglab.org/">SCREEN browser</a> shows measured regulatory elements around any gene you know, and <a href="https://seqnn.org/">seqnn.org</a> shows predicted and measured brain <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr> side by side.</p>
+<h2 id="how-the-field-got-here">How the field got here<a class="headerlink" href="#how-the-field-got-here" title="Permanent link">&para;</a></h2>
+<!-- noglossary -->
+<figure>
+<svg viewBox="0 0 720 400" role="img" aria-label="Input windows grew from about a hundred base pairs in 2015 to a megabase in 2026, but the context these models demonstrably use stays near one to forty kilobases, and one 2025 model wins on variant scoring with a 128 bp window plus a cross-species alignment." style="max-width:100%;height:auto;font-family:var(--md-text-font-family,sans-serif)">
+  <!-- y gridlines -->
+  <g stroke="var(--md-default-fg-color--lightest)" stroke-width="1">
+    <line x1="70" y1="41.6" x2="690" y2="41.6"/><line x1="70" y1="121.2" x2="690" y2="121.2"/><line x1="70" y1="200.8" x2="690" y2="200.8"/><line x1="70" y1="280.4" x2="690" y2="280.4"/><line x1="70" y1="360" x2="690" y2="360"/>
+  </g>
+  <g font-size="10" fill="var(--md-default-fg-color--light)" text-anchor="end">
+    <text x="62" y="45">1 Mb</text><text x="62" y="124.7">100 kb</text><text x="62" y="204.3">10 kb</text><text x="62" y="283.9">1 kb</text><text x="62" y="363.5">100 bp</text>
+  </g>
+  <!-- x axis -->
+  <line x1="70" y1="360" x2="690" y2="360" stroke="currentColor" stroke-width="1"/>
+  <g font-size="10" fill="var(--md-default-fg-color--light)" text-anchor="middle">
+    <text x="70" y="378">2015</text><text x="231.7" y="378">2018</text><text x="393.5" y="378">2021</text><text x="555.2" y="378">2024</text><text x="663" y="378">2026</text>
+  </g>
+  <!-- usable-context drop ticks -->
+  <g stroke="var(--md-accent-fg-color)" stroke-width="1" stroke-dasharray="2 2">
+    <line x1="251.7" y1="111.9" x2="251.7" y2="160.6"/><line x1="436.1" y1="97.8" x2="436.1" y2="280.4"/>
+  </g>
+  <!-- input-window points -->
+  <g fill="var(--md-primary-fg-color)">
+    <circle cx="99.1" cy="359.6" r="4"/><circle cx="103.4" cy="280.4" r="4"/><circle cx="143.9" cy="298.1" r="4"/><circle cx="251.7" cy="111.9" r="4"/><circle cx="287.8" cy="186.8" r="4"/><circle cx="404.3" cy="280.4" r="4"/><circle cx="436.1" cy="97.8" r="4"/><circle cx="476.5" cy="231.7" r="4"/><circle cx="606.9" cy="254.5" r="4"/><circle cx="611.3" cy="63.9" r="4"/><circle cx="665.2" cy="39.9" r="4"/>
+  </g>
+  <!-- usable-context hollow markers -->
+  <g fill="var(--md-default-bg-color)" stroke="var(--md-accent-fg-color)" stroke-width="1.6">
+    <circle cx="251.7" cy="160.6" r="4"/><circle cx="436.1" cy="280.4" r="4"/>
+  </g>
+  <!-- GPN-MSA square -->
+  <rect x="607.3" y="347.5" width="8" height="8" fill="var(--md-default-fg-color--light)"/>
+  <!-- point labels -->
+  <g font-size="10" fill="currentColor">
+    <text x="103.4" y="273" text-anchor="middle">DeepSEA</text>
+    <text x="251.7" y="104" text-anchor="middle">Basenji</text>
+    <text x="430" y="90" text-anchor="end">Enformer</text>
+    <text x="611.3" y="57" text-anchor="middle">Borzoi</text>
+    <text x="672" y="34" text-anchor="end">AlphaGenome</text>
+  </g>
+  <!-- annotations -->
+  <g font-size="9.5" fill="var(--md-accent-fg-color)">
+    <text x="258" y="164" data-i18n="rf">receptive field ≈ 32 kb, not 131 kb</text>
+    <text x="428" y="296" text-anchor="end" data-i18n="usable">a ~1 kb window already recovers ⅔ of the signal</text>
+  </g>
+  <text x="600" y="343" text-anchor="end" font-size="9.5" fill="var(--md-default-fg-color--light)" data-i18n="gpn">GPN-MSA: 128 bp + a 100-species alignment</text>
+  <!-- legend -->
+  <g font-size="10" fill="var(--md-default-fg-color--light)">
+    <circle cx="86" cy="26" r="4" fill="var(--md-primary-fg-color)"/><text x="96" y="30" data-i18n="leg1">input window a paper advertises</text>
+    <circle cx="86" cy="44" r="4" fill="var(--md-default-bg-color)" stroke="var(--md-accent-fg-color)" stroke-width="1.6"/><text x="96" y="48" data-i18n="leg2">context the model demonstrably uses</text>
+  </g>
+</svg>
+<figcaption>The input window grew ten-thousandfold in a decade. The context a model demonstrably uses barely moved, and in 2025 a 128 bp model won a variant-scoring task outright. Bigger window is not the axis the field runs on.</figcaption>
+</figure>
+<!-- /noglossary -->
+
+<p>The story starts in 2015 with two papers three weeks apart. <a href="https://doi.org/10.1038/nbt.3300">DeepBind</a> came first and is the clean illustration of the point above, a learnable <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motif</abbr> scanner and little more. <a href="https://doi.org/10.1038/nmeth.3547">DeepSEA</a> is the one everything since looks like: one network, 1,000 bp in, 919 chromatin measurements out, and in-silico mutagenesis to turn the trained model into a variant scorer. That last move is what made a sequence model into a human-genetics instrument.</p>
+<p>Three years later <a href="https://doi.org/10.1101/gr.227819.117">Basenji</a> changed two things at once, switching from yes-or-no labels to quantitative coverage and jumping from 1 kb to 131 kb with dilated convolutions. Then in 2021 the field split. <a href="https://doi.org/10.1038/s41588-021-00782-6">BPNet</a> went the opposite way on context, reading 1 kb and predicting base-resolution binding profiles, paired with attribution and <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motif</abbr> clustering so that its output was mechanism you could take to the bench; it predicted that Nanog binds with a roughly 10.5 bp helical periodicity and that was then confirmed with CRISPR point mutations. <a href="https://doi.org/10.1038/s41592-021-01252-x">Enformer</a> went the other way, swapping dilation for <abbr title="A mechanism that lets a model decide, for each position, which other positions are worth looking at instead of treating them equally">attention</abbr> and reading 197 kb. Neither BPNet nor its accessibility successor <a href="https://doi.org/10.1101/2024.12.25.630221">ChromBPNet</a> is an obsolete small model; they are a deliberate choice of the opposite corner. The recent frontier merges the two directions. <a href="https://doi.org/10.1038/s41588-024-02053-6">Borzoi</a> predicts RNA-seq coverage directly, so transcription, splicing, and polyadenylation come out of one head, and <a href="https://doi.org/10.1038/s41586-025-10014-0">AlphaGenome</a> reads a megabase and emits down to single bases across eleven kinds of measurement, leading 25 of 26 variant-effect evaluations in its paper.</p>
+<p>Read the timeline together with the figure, though, or it teaches the wrong lesson. <a href="https://doi.org/10.1038/s41587-024-02511-w">GPN-MSA</a> wins genome-wide variant scoring with a small window plus a hundred-vertebrate alignment. ChromBPNet stays competitive on accessibility with about 2 kb. The <a href="https://doi.org/10.1038/s41587-024-02414-w">DREAM challenge</a> winner and a <a href="https://doi.org/10.1038/s41586-024-08430-9">1.3-million-parameter model</a> that matches Enformer-scale accuracy on reporter data are both tiny. Bigger window is not the axis.</p>
+<table>
+<thead>
+<tr>
+<th>Model (year)</th>
+<th>Reads</th>
+<th>Emits</th>
+<th>What it added</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://doi.org/10.1038/nbt.3300">DeepBind</a> (2015)</td>
+<td>~101 bp</td>
+<td>one binding score</td>
+<td>first convolutional net on raw DNA; a learnable <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motif</abbr> scanner</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/nmeth.3547">DeepSEA</a> (2015)</td>
+<td>1 kb</td>
+<td>919 chromatin labels</td>
+<td>one network for all of ENCODE, plus in-silico mutagenesis to score variants</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1101/gr.200535.115">Basset</a> (2016)</td>
+<td>600 bp</td>
+<td>164 accessibility labels</td>
+<td>tuned, open, reusable code; where the field's software culture starts</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1101/gr.227819.117">Basenji</a> (2018)</td>
+<td>131 kb (uses ~32 kb)</td>
+<td>4,229 <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr>, 128 bp bins</td>
+<td>quantitative coverage instead of yes/no; dilation buys range</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1016/j.cell.2018.12.015">SpliceAI</a> (2019)</td>
+<td>15 kb window</td>
+<td>per-base splice donor/acceptor</td>
+<td>the one model in routine clinical use</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41588-021-00782-6">BPNet</a> (2021)</td>
+<td>1 kb</td>
+<td>base-resolution TF profiles</td>
+<td>attribution plus <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motif</abbr> clustering; syntax you test at the bench</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41592-021-01252-x">Enformer</a> (2021)</td>
+<td>197 kb</td>
+<td>5,313 human <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr>, 128 bp bins</td>
+<td><abbr title="A mechanism that lets a model decide, for each position, which other positions are worth looking at instead of treating them equally">attention</abbr> in place of dilated convolutions</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41588-022-01102-2">Sei</a> (2022)</td>
+<td>4 kb</td>
+<td>21,907 profiles → 40 classes</td>
+<td>more targets, not more context; a vocabulary of regulatory activity</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1101/2024.12.25.630221">ChromBPNet</a> (preprint)</td>
+<td>2.1 kb</td>
+<td>base-resolution ATAC/DNase</td>
+<td>factors out the enzyme's own cut bias, which footprinting had read as biology</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41588-024-02053-6">Borzoi</a> (2025)</td>
+<td>524 kb</td>
+<td>RNA-seq coverage, 32 bp bins</td>
+<td>transcription, splicing, polyadenylation from one output</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41586-025-10014-0">AlphaGenome</a> (2026)</td>
+<td>1 Mb</td>
+<td>5,930 <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr>, 11 modalities, to 1 bp</td>
+<td>range and resolution together; leads 25 of 26 variant evaluations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-got-better-and-what-hasnt">What got better, and what hasn't<a class="headerlink" href="#what-got-better-and-what-hasnt" title="Permanent link">&para;</a></h2>
+<p>Two things improved, and both are worth stating before the criticism. Splicing is the field's one clinical success. Whether a position is a splice donor or acceptor is nearly settled by local sequence, it barely varies across cell types, and it is annotated at effectively every base of the genome, so <a href="https://doi.org/10.1016/j.cell.2018.12.015">SpliceAI</a> and <a href="https://doi.org/10.1186/s13059-022-02664-4">Pangolin</a> work well enough that the ClinGen sequence-variant group <a href="https://doi.org/10.1016/j.ajhg.2023.06.002">wrote SpliceAI thresholds into clinical variant classification</a>. The other real gain is direction of effect for expression QTLs: between Borzoi and AlphaGenome the sign-accuracy rose from about 0.75 to 0.80 auROC, and at a strict sign-accuracy cutoff the fraction of GTEx <abbr title="A genetic variant statistically associated with the expression level of a gene, measured across a population">eQTLs</abbr> recovered went from 19% to 41%. For prioritising a credible set of variants that is a usable jump.</p>
+<p>The failure is one problem wearing three coats, and all three are about magnitude. When you knock down a validated enhancer with <abbr title="CRISPR interference — silencing a specific regulatory element so you can measure, causally, what it controls">CRISPRi</abbr> the median one drops its target gene by about 20%, and <a href="https://doi.org/10.1186/s13059-023-02899-9">Enformer predicts about 4%</a>; for roughly 60% of genes with a validated enhancer, no tested candidate cleared even a 10% predicted effect. Two independent 2026 results find the same compression from other directions: AlphaGenome's quantitative expression effects <a href="https://doi.org/10.64898/2026.07.10.737654">transfer to mouse but come out compressed roughly a hundredfold</a> against the empirical benchmark while splice-site disruption transfers almost perfectly, and models trained across <a href="https://doi.org/10.1093/nargab/lqag059">five mammalian livers</a> predict whether an orthologous region is accessible but not by how much it differs between species.</p>
+<p>The sharpest version is what happens when you stop comparing genes and start comparing people. Enformer's headline correlation is <a href="https://doi.org/10.1038/s41588-023-01574-w">computed across genes</a>, where much of the signal is just "is this a housekeeping promoter." Hold the gene fixed and vary the individual and it collapses toward zero. In one <a href="https://doi.org/10.1038/s41588-023-01524-6">brain-cortex benchmark</a> a plain linear model on genotypes significantly predicted 921 genes at a mean correlation of 0.26 while Enformer managed 162 at 0.02, and of the 598 genes where Enformer was significantly correlated with truth, 195 were significantly anti-correlated. Getting the sign backwards is worse than being weak. The honest 2026 refinement is that this is not a blanket failure across individuals but a failure for one modality: AlphaGenome approaches the <a href="https://doi.org/10.64898/2026.02.01.702969">heritability ceiling for personal chromatin accessibility</a> and stays far below baseline for personal gene expression. Local grammar is largely solved; long-range integration is not.</p>
+<p>The diagnostic question to carry into any paper is simple: what is held fixed and what varies. And the rule that follows from all of it: trust the ordering these models give you, not the number.</p>
+<h2 id="where-the-labels-come-from">Where the labels come from<a class="headerlink" href="#where-the-labels-come-from" title="Permanent link">&para;</a></h2>
+<p>Reread that timeline as a story about labels rather than architecture and the whole field snaps into focus. The phases are not "bigger networks," they are new sources of training signal: first bulk assays over the reference genome from ENCODE and Roadmap, then base-resolution assays and designed reporter libraries, then a detour through self-supervision on raw DNA, and now megabase multimodal assays plus counterfactuals manufactured in silico.</p>
+<p>The reason this matters is that the genome runs out. <a href="https://doi.org/10.1038/s41586-023-06661-w">de Boer and Taipale</a> put it most sharply: holding out a chromosome does not create independent test data, because homologous sequence straddles the split, and the human genome is simply too short and too undiversified to fit the regulatory code from natural sequence alone. A <a href="https://doi.org/10.1101/2025.01.22.634321">2026 follow-up</a> measured that leakage and found memorisation inflates reported accuracy exactly on the sequences most similar to training, worst for the longest-context models.</p>
+<p>Designed libraries are the answer that keeps working, because they manufacture the labels the genome cannot supply. The <a href="https://doi.org/10.1038/s41587-024-02414-w">DREAM challenge</a> handed teams 6.7 million random promoters measured in yeast and 19 entries beat the previous state of the art, the winner a small <abbr title="Convolutional neural network: slides a small filter across the input, so it spots the same local pattern wherever it occurs">CNN</abbr>. A <a href="https://doi.org/10.1038/s41586-024-08430-9">680,000-element reporter library</a> trained a 1.3-million-parameter model to Enformer-level accuracy. Enhancer design works for the same reason, since it only needs correct ranking inside a library it manufactured and then checks the answer at the bench. Causal perturbation data, by contrast, is scarce and mostly from one cell line, which is why the distal-enhancer benchmark everyone quotes rests on a few hundred element-gene pairs in K562.</p>
+<p>The self-supervised branch fits the same logic. The idea is to carry the <a href="../../1-basics/1.1-llm-agents/">language-model playbook</a> over to DNA, predicting masked or next bases so the model learns sequence structure without labels. It works well in bacteria, whose genomes are 85 to 90% coding and densely constrained, so predicting the next base is nearly a functional objective. Human DNA is about 98% noncoding and mostly unconstrained, and that mismatch shows up in the benchmarks: on counterfactual variant effect a small supervised accessibility model reaches <a href="https://arxiv.org/abs/2412.05430">0.77 to 0.89 auROC against 0.65 to 0.70</a> for the best <abbr title="Taken as a pre-trained model and trained a little further on a smaller, task-specific dataset">fine-tuned</abbr> language model. Where self-supervision does pay is constraint, coding variants, and indels, and <a href="https://doi.org/10.1038/s41586-026-10176-5">Evo 2</a> is the only family that can score an insertion or deletion at all. The strongest rebuttal is worth naming rather than burying: pairwise in-silico mutagenesis of a <a href="https://doi.org/10.1038/s41588-025-02347-3">genomic language model's internals</a> recovers RNA structure and transcription-factor binding sites that single-position scoring never saw, so the branch is far from settled.</p>
+<p>One quiet detail in AlphaGenome makes the label-supply reading concrete. Its main architectural move is to distil an ensemble into one student using shifted, reverse-complemented, and randomly mutated inputs, and dropping the mutation augmentation measurably hurts variant scoring. That is label manufacturing by another name. So before trusting any number a model gives you, ask who measured its labels and over what sequences.</p>
+<h2 id="what-you-can-trust-it-for">What you can trust it for<a class="headerlink" href="#what-you-can-trust-it-for" title="Permanent link">&para;</a></h2>
+<p>Nobody retrains these models. The realistic moves are to fine-tune a small output head, attach a linear probe to frozen <abbr title="A learned list of numbers standing in for something discrete — a word, a gene, a cell — placed so that similar things sit close together">embeddings</abbr>, or just score variants with a released checkpoint, and a frozen-<abbr title="A learned list of numbers standing in for something discrete — a word, a gene, a cell — placed so that similar things sit close together">embedding</abbr> linear probe is almost always the right first experiment. The page above is organised by lineage because that is how the literature is written, but when you are holding a dataset you want the inverse index.</p>
+<table>
+<thead>
+<tr>
+<th>If you want to</th>
+<th>Reach for</th>
+<th>Not for this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Score a variant near a splice site, clinically</td>
+<td><a href="https://doi.org/10.1016/j.cell.2018.12.015">SpliceAI</a> or <a href="https://doi.org/10.1186/s13059-022-02664-4">Pangolin</a>, run yourself, at <a href="https://doi.org/10.1016/j.ajhg.2023.06.002">ClinGen thresholds</a></td>
+<td>precomputed lookups, or any general sequence-to-function model</td>
+</tr>
+<tr>
+<td>Score any SNV genome-wide, cheaply</td>
+<td><a href="https://doi.org/10.1038/s41587-024-02511-w">GPN-MSA</a> precomputed scores for all ~9 billion human SNVs</td>
+<td>standing up a multi-billion-parameter model</td>
+</tr>
+<tr>
+<td>Find <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motifs</abbr> and footprints in your own ATAC data</td>
+<td><a href="https://doi.org/10.1101/2024.12.25.630221">ChromBPNet</a>, then <a href="https://github.com/jmschrei/tangermeme">tangermeme</a> and TF-MoDISco</td>
+<td>reading first-layer convolution filters as <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motifs</abbr></td>
+</tr>
+<tr>
+<td>Prioritise a non-coding GWAS hit</td>
+<td><a href="https://doi.org/10.1038/s41586-025-10014-0">AlphaGenome</a> or <a href="https://doi.org/10.1038/s41588-024-02053-6">Borzoi</a> as one line of evidence, using rank and direction</td>
+<td>treating the predicted number as an effect size</td>
+</tr>
+<tr>
+<td>Predict accessibility for a cell type you have data for</td>
+<td>ChromBPNet per <abbr title="Pooling many single cells of the same type into one aggregate profile, to get a cleaner signal than any single sparse cell gives">pseudobulk</abbr>; <a href="https://doi.org/10.1038/s41592-025-02854-5">scooby</a>, Decima, or <a href="https://github.com/liuhlab/bolero">bolero</a> across many states</td>
+<td>Enformer's bulk ENCODE <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr></td>
+</tr>
+<tr>
+<td>Design an enhancer for a cell type</td>
+<td>an oracle trained on your own readout plus directed in-silico evolution</td>
+<td>a generative model, unless you specifically want diversity</td>
+</tr>
+<tr>
+<td>Ask what one person's variant does to one gene</td>
+<td>nothing yet; a linear model on personal genotypes still wins</td>
+<td>any of the above</td>
+</tr>
+</tbody>
+</table>
+<p>Four misconceptions are worth killing directly. "Foundation model" means two unrelated things in this literature, self-supervised pretraining on raw DNA and large multitask supervised models, sometimes inside one review, so say which you mean. Bigger and self-supervised is not automatically better, as the variant benchmark above shows. First-layer convolution filters are not <abbr title="The short, recurring sequence pattern a protein such as a transcription factor prefers to bind">motifs</abbr>; use context-aware attributions clustered into patterns, DeepSHAP into TF-MoDISco, not filter pictures. And <abbr title="A mechanism that lets a model decide, for each position, which other positions are worth looking at instead of treating them equally">attention</abbr> weights are not attribution, since they show roughly where a model looked and can be changed without changing the prediction.</p>
+<h2 id="designing-dna-not-just-reading-it">Designing DNA, not just reading it<a class="headerlink" href="#designing-dna-not-just-reading-it" title="Permanent link">&para;</a></h2>
+<p>Turn a reading model around and it becomes a designer. Instead of scoring a sequence you already have, you fix a goal and search sequence space for a sequence the model says will hit it. The reading model plays oracle, the objective is almost always a contrast (on-target activity minus the strongest off-target, not raw activity), and you synthesise a few hundred candidates, test them at the bench, and feed the measurements back as new training data. <a href="https://doi.org/10.1038/s44222-025-00280-y">De Winter, Konstantakos &amp; Aerts 2025</a> is the review that lays this loop out; the useful thing to internalise is that the model is the cheap part, and the objective and the assay are where the biology lives.</p>
+<p>The workhorse search is directed in silico evolution, greedy point mutation guided by the oracle, and it is a stubbornly strong baseline. Generative priors like GANs and diffusion mostly buy diversity and naturalness rather than higher fitness. The wet-lab record is real. <a href="https://doi.org/10.1038/s41586-023-06936-2">Taskiran et al. 2024</a> evolved fly enhancers from random sequence that fired in the intended neurons in a live animal. <a href="https://doi.org/10.1038/s41586-024-08070-z">Gosai et al. 2024</a> designed human regulatory elements that beat natural sequences on cell-type specificity, 94% against 41%. <a href="https://doi.org/10.1038/s41586-022-04506-6">Vaishnav et al. 2022</a> is the cleanest teaching case: a model trained on tens of millions of random yeast promoters, then run as a fitness landscape, which is what makes it obvious that design and evolution are one computation in two directions. <a href="https://doi.org/10.1038/s41586-025-10093-z">PARM</a> does the same for human promoters with a sub-million-parameter model.</p>
+<p>A separate <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">track</abbr> writes whole genomes rather than single elements. DNA language models like <a href="https://doi.org/10.1126/science.ado9336">Evo</a> and <a href="https://doi.org/10.1038/s41586-026-10176-5">Evo 2</a> generate chromosome-scale sequence, and Evo 2 designed chromatin-accessibility patterns that spelled Morse code in living cells, though functional genomes written from scratch stay aspirational and the biosecurity questions are live. For a neuro lab the near-term payoff is cell-type-specific enhancer AAVs, where designed elements are starting to work in the mammalian brain, with the honest caveat that measured open chromatin still beats sequence models at picking which candidates fire.</p>
+<h2 id="where-the-lab-fits">Where the lab fits<a class="headerlink" href="#where-the-lab-fits" title="Permanent link">&para;</a></h2>
+<p>The lab's published record is atlas building: single-cell DNA methylation and 3D genome across the <a href="https://doi.org/10.1038/s41586-023-06805-y">mouse</a> and <a href="https://doi.org/10.1126/science.adf5357">human</a> brain. The move here is to turn those atlases into a training corpus, so the question shifts from "what cell states exist and what is their epigenome" to "what in the sequence encodes them, and which non-coding variants perturb them." That is <a href="https://github.com/liuhlab/bolero">bolero</a>, a cell-state-conditioned model built on the Borzoi backbone; the paper is in preparation, so cite it as software. See <a href="../../5-lab-code/5.2-research-projects/">Research Projects</a>.</p>
+<p>The magnitude problem from earlier is part of the reason to build it. A bulk <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">track</abbr> averages over cells where an element is active and cells where it is not, so a compressed prediction may be the correct conditional expectation for a bulk readout, which is an argument for conditioning on cell state rather than a reason to give up. That is what <a href="https://doi.org/10.1038/s41592-025-02854-5">scooby</a>, Decima, and bolero are each doing; see <a href="../4.5-cell-state-models/">Cell-State Models</a> and <a href="../../3-experimental/3.5-single-cell-omics/">Single-Cell Omics</a>. The open lane for a methylation lab is that nothing in the Enformer-to-AlphaGenome line predicts DNA methylation. In a 2026 brain-atlas <a href="https://doi.org/10.64898/2026.02.07.704075">fine-tune</a>, CpG methylation predicts at 0.94 and non-CG methylation at 0.65. Read those skeptically: mCG is bimodal and mostly follows CpG-island grammar, so 0.94 is the easy number, while mCH is neuron-specific, accumulates after birth, and has no bulk analogue, so 0.65 is both the honest number and the interesting one. See <a href="../../2-biology/2.1-molecular-epigenetics/">Molecular Biology &amp; Epigenetics</a>.</p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>The awkward truth is that there is no current course covering <abbr title="Machine learning with neural networks many layers deep, where the useful features are learned instead of hand-designed">deep learning</abbr> for regulatory genomics; the best full lecture series froze in spring 2021, before Borzoi and before AlphaGenome. The best hands-on material now is a library's tutorial folder. A workable ladder: do <a href="../4.2-deep-learning/">Deep Learning Basics</a> for the <abbr title="Machine learning with neural networks many layers deep, where the useful features are learned instead of hand-designed">deep learning</abbr>, take a genomics course for what the assays are, run an AlphaGenome Colab for a same-day first result, work through gReLU's notebooks over a weekend, then bring ChromBPNet and tangermeme to your own data for a real project.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>What it is</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://genentech.github.io/gReLU/">gReLU tutorials</a></td>
+<td>load Enformer, Borzoi, or Decima in PyTorch, score a variant, design a sequence</td>
+<td>a weekend</td>
+</tr>
+<tr>
+<td><a href="https://github.com/google-deepmind/alphagenome">AlphaGenome Colabs</a></td>
+<td>fastest first result; inference runs server-side, no GPU needed</td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kundajelab/chrombpnet">ChromBPNet</a> + <a href="https://github.com/jmschrei/tangermeme">tangermeme</a></td>
+<td>the first real project: a bias-corrected base-resolution model plus interpretation</td>
+<td>about a week, needs a GPU</td>
+</tr>
+<tr>
+<td><a href="https://github.com/calico/borzoi">Borzoi</a></td>
+<td>variant, splicing, and polyadenylation notebooks; MIT-licensed weights</td>
+<td>a day</td>
+</tr>
+<tr>
+<td><a href="https://liuhlab.github.io/bolero/">bolero</a></td>
+<td>the lab's own model, once you have the above</td>
+<td>about a week</td>
+</tr>
+<tr>
+<td><a href="https://liulab-dfci.github.io/bioinfo-combio/">STAT115</a></td>
+<td>what the assays actually are, no <abbr title="Machine learning with neural networks many layers deep, where the useful features are learned instead of hand-designed">deep learning</abbr></td>
+<td>dip in</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<p>Start with the review that explains mechanics rather than surveying results, <a href="https://doi.org/10.1038/s41576-019-0122-6">Eraslan et al. 2019</a>. For a current single review of sequence-to-expression that adds the training-data lens, read <a href="https://doi.org/10.1038/s41576-025-00841-2">Barbadilla-Martínez et al. 2025</a>; <a href="https://doi.org/10.1146/annurev-genom-021623-024727">Sokolova et al. 2024</a> is open access and organises the field by prediction target. The critique thread is short and worth reading in order: <a href="https://doi.org/10.1186/s13059-023-02899-9">Karollus 2023</a> for the distal-enhancer ablation, the <a href="https://doi.org/10.1038/s41588-023-01574-w">Huang</a> and <a href="https://doi.org/10.1038/s41588-023-01524-6">Sasse</a> pair for the personal-genome collapse, and <a href="https://doi.org/10.1038/s41586-023-06661-w">de Boer and Taipale 2024</a> for the diagnosis. For where it goes next, <a href="https://arxiv.org/abs/2602.01230">Nagai et al. 2026</a> argue the point this page is built around: predictive accuracy does not automatically become regulatory understanding, and closing that gap needs experiments in the loop. Those papers are the kind we take apart in <a href="../../9-journal-club/">Journal Club</a>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2026 12:51:46 CST">July 24, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../4.2-deep-learning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deep Learning Basics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Deep Learning Basics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../4.4-protein-models/" class="md-footer__link md-footer__link--next" aria-label="Next: Protein Models">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Protein Models
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "content.tooltips", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/mermaid.min.js" defer></script>
+      
+    
+  </body>
+</html>
