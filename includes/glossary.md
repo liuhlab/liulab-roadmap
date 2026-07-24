@@ -33,3 +33,22 @@ Two rules:
 *[fine-tuned]: Taken as a pre-trained model and trained a little further on a smaller, task-specific dataset
 *[large language model]: A very large Transformer pre-trained on text, which is why it can be prompted to do tasks it was never explicitly trained on
 *[LLM]: Large language model: a very large Transformer pre-trained on text, promptable for tasks it was never explicitly trained on
+*[one-hot]: Turning each DNA base into a column of four slots with a 1 in the A, C, G, or T slot and zeros elsewhere, so a sequence becomes a 4-by-length matrix a network can read
+*[track]: One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce
+*[receptive field]: The stretch of input sequence that can actually influence one output position, usually far shorter than the window the model is fed
+*[position weight matrix]: A table of per-position base preferences for a binding motif; scanning it along a sequence is the same operation a convolution filter performs
+*[PWM]: Position weight matrix: a table of per-position base preferences for a motif, scanned along a sequence exactly as a convolution filter is
+*[motif]: The short, recurring sequence pattern a protein such as a transcription factor prefers to bind
+*[in silico mutagenesis]: Changing one or more bases in the input and rereading the model's output, to estimate what that mutation does
+*[ISM]: In silico mutagenesis: changing bases in the input and rereading the model's output to estimate a mutation's effect
+*[eQTL]: A genetic variant statistically associated with the expression level of a gene, measured across a population
+*[caQTL]: A genetic variant statistically associated with how open (accessible) a stretch of chromatin is
+*[MPRA]: Massively parallel reporter assay — a method that measures the regulatory activity of tens of thousands to millions of designed DNA sequences at once
+*[CRISPRi]: CRISPR interference — silencing a specific regulatory element so you can measure, causally, what it controls
+*[pseudobulk]: Pooling many single cells of the same type into one aggregate profile, to get a cleaner signal than any single sparse cell gives
+*[ATAC-seq]: An assay that reads which stretches of DNA are open and accessible across the genome
+*[ChIP-seq]: An assay that reads where a particular protein sits on the genome
+*[CAGE]: An assay that reads where transcription starts, by capturing the 5' ends of RNAs
+*[coding agent]: A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions
+*[harness]: The tools, context management and execution environment wrapped around a model to make it an agent; Claude Code is the harness, Claude is the model inside it
+*[MCP]: An open standard, now stewarded by the Linux Foundation, that lets any agent connect to outside systems such as databases through one common interface
