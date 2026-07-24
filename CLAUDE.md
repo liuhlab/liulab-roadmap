@@ -87,5 +87,9 @@ not an entry. Mermaid fences work. Citations (`mkdocs-bibtex`) not yet wired up.
 - Mermaid ignores `direction` inside a subgraph that has edges to another
   subgraph. Lay figures out as a spine plus fan-out instead.
 - `mkdocs-static-i18n` is PyPI-only → `[pypi-dependencies]` in `pixi.toml`.
+  Same for `git-revision-date-localized` (conda-forge froze at 1.2.9), which
+  must also sit *after* `i18n` in `plugins:` or the build errors out.
+- The page footer date comes from `git log` per file, so CI checkouts need
+  `fetch-depth: 0`. A shallow clone dates every page alike and still exits 0.
 - Empty dirs need a `.gitkeep`, or `custom_dir`-style config breaks in CI.
 - `pixi.toml` version uses CalVer (`YYYY.M.D`).

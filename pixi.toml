@@ -25,6 +25,11 @@ nodejs = ">=20"
 [pypi-dependencies]
 # Not packaged on conda-forge — pull from PyPI.
 mkdocs-static-i18n = ">=1.2"
+# Stamps each page with its last-commit date. conda-forge has it, but the
+# feedstock stalled at 1.2.9 (2024); >=1.5.0 is where the babel locale fix
+# for mkdocs-static-i18n landed. Reads git through GitPython, which needs the
+# `git` binary on PATH — always true on a machine that cloned this repo.
+mkdocs-git-revision-date-localized-plugin = ">=1.5.0"
 
 [tasks]
 serve = "mkdocs serve"

@@ -95,7 +95,11 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2026c-h151e31d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/urllib3-2.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
+      - pypi: https://files.pythonhosted.org/packages/20/6a/d3b8208d2f8aac66abe8ccc1c23fa2c89464ec42cc71a601e95d05902428/gitpython-3.1.55-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/57/d0/cbe85158dc091219fd5134bf6d724d30b1f2005ee1d0dabaaa41416bee78/mkdocs_git_revision_date_localized_plugin-1.5.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/0b/43ff4afb6b438d47718b1959a22075ed95d8460d8c47381878b37a40de63/mkdocs_static_i18n-1.3.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl
       osx-64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/babel-2.18.0-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/backports.zstd-1.6.0-py314h680f03e_0.conda
@@ -162,7 +166,11 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/watchdog-6.0.0-py314h0b69929_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/yaml-0.2.5-h4132b18_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h3eecb57_6.conda
+      - pypi: https://files.pythonhosted.org/packages/20/6a/d3b8208d2f8aac66abe8ccc1c23fa2c89464ec42cc71a601e95d05902428/gitpython-3.1.55-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/57/d0/cbe85158dc091219fd5134bf6d724d30b1f2005ee1d0dabaaa41416bee78/mkdocs_git_revision_date_localized_plugin-1.5.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/0b/43ff4afb6b438d47718b1959a22075ed95d8460d8c47381878b37a40de63/mkdocs_static_i18n-1.3.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/babel-2.18.0-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/backports.zstd-1.6.0-py314h680f03e_0.conda
@@ -229,7 +237,11 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/watchdog-6.0.0-py314ha14b1ff_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/yaml-0.2.5-h925e9cb_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - pypi: https://files.pythonhosted.org/packages/20/6a/d3b8208d2f8aac66abe8ccc1c23fa2c89464ec42cc71a601e95d05902428/gitpython-3.1.55-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/57/d0/cbe85158dc091219fd5134bf6d724d30b1f2005ee1d0dabaaa41416bee78/mkdocs_git_revision_date_localized_plugin-1.5.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/0b/43ff4afb6b438d47718b1959a22075ed95d8460d8c47381878b37a40de63/mkdocs_static_i18n-1.3.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda
   build_number: 20
@@ -2145,6 +2157,38 @@ packages:
     - zstd >=1.5.7,<1.6.0a0
   size: 433413
   timestamp: 1764777166076
+- pypi: https://files.pythonhosted.org/packages/20/6a/d3b8208d2f8aac66abe8ccc1c23fa2c89464ec42cc71a601e95d05902428/gitpython-3.1.55-py3-none-any.whl
+  name: gitpython
+  version: 3.1.55
+  sha256: 7c9ec1e69c158c081632ab35c41471e302c96db2ae42165036a5d2403378812e
+  requires_dist:
+  - gitdb>=4.0.1,<5
+  - typing-extensions>=3.10.0.2 ; python_full_version < '3.10'
+  - coverage[toml] ; extra == 'test'
+  - ddt>=1.1.1,!=1.4.3 ; extra == 'test'
+  - mock ; python_full_version < '3.8' and extra == 'test'
+  - mypy==1.18.2 ; python_full_version >= '3.9' and extra == 'test'
+  - pre-commit ; extra == 'test'
+  - pytest>=7.3.1 ; extra == 'test'
+  - pytest-cov ; extra == 'test'
+  - pytest-instafail ; extra == 'test'
+  - pytest-mock ; extra == 'test'
+  - pytest-sugar ; extra == 'test'
+  - typing-extensions ; python_full_version < '3.11' and extra == 'test'
+  - sphinx>=7.4.7,<8 ; extra == 'doc'
+  - sphinx-rtd-theme ; extra == 'doc'
+  - sphinx-autodoc-typehints ; extra == 'doc'
+  requires_python: '>=3.7'
+- pypi: https://files.pythonhosted.org/packages/57/d0/cbe85158dc091219fd5134bf6d724d30b1f2005ee1d0dabaaa41416bee78/mkdocs_git_revision_date_localized_plugin-1.5.3-py3-none-any.whl
+  name: mkdocs-git-revision-date-localized-plugin
+  version: 1.5.3
+  sha256: cd96e432de6a7e59b31c7041574b22f84179c8636835419ff458877ecfaaaf05
+  requires_dist:
+  - babel>=2.7.0
+  - gitpython>=3.1.44
+  - mkdocs>=1.0,<2
+  - tzdata>=2023.3 ; sys_platform == 'win32'
+  requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/6a/0b/43ff4afb6b438d47718b1959a22075ed95d8460d8c47381878b37a40de63/mkdocs_static_i18n-1.3.1-py3-none-any.whl
   name: mkdocs-static-i18n
   version: 1.3.1
@@ -2153,3 +2197,15 @@ packages:
   - mkdocs>=1.5.2
   - mkdocs-material<9.7.2 ; extra == 'material'
   requires_python: '>=3.8'
+- pypi: https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl
+  name: gitdb
+  version: 4.0.12
+  sha256: 67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf
+  requires_dist:
+  - smmap>=3.0.1,<6
+  requires_python: '>=3.7'
+- pypi: https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl
+  name: smmap
+  version: 5.0.3
+  sha256: c106e05d5a61449cf6ba9a1e650227ecfb141590d2a98412103ff35d89fc7b2f
+  requires_python: '>=3.7'

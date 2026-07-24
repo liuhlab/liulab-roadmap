@@ -28,6 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The last-updated date comes from `git log` per file. A shallow
+          # checkout stamps every page with the HEAD commit date and exits 0,
+          # so this failing is invisible without the full history.
+          fetch-depth: 0
       - uses: prefix-dev/setup-pixi@v0.8.1
         with:
           cache: true

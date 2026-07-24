@@ -5,6 +5,18 @@
   --md-admonition-icon--roadmap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg>');
 }
 
+/* Last-updated stamp. The theme prints a clock icon and a bare date, hiding
+   the words "Last update" in a hover tooltip — no use on a phone. Spell it
+   out; `lang` is set per locale, so the two builds pick their own label. */
+
+.md-source-file__fact .git-revision-date-localized-plugin::before {
+  content: "Last update: ";
+}
+
+html[lang="zh"] .md-source-file__fact .git-revision-date-localized-plugin::before {
+  content: "最后更新：";
+}
+
 /* Tier map — stacked bands showing which parts of a course are essential,
    core, or optional. Colours come from theme tokens so dark mode follows. */
 

@@ -129,6 +129,17 @@ plugins:
             How To: 如何做
             Interesting Labs: 有趣的实验室
             Journal Club: 文献俱乐部
+  # "Last update" date in each page's footer, taken from the file's last commit.
+  # Must be listed AFTER i18n — the plugin errors out otherwise, because it reads
+  # the per-locale tag i18n attaches to each file to pick the date format.
+  - git-revision-date-localized:
+      type: date
+      # Render dates in the readers' timezone rather than UTC.
+      timezone: Asia/Shanghai
+      # The default turns "file not in git yet" into a warning, which --strict
+      # then treats as an error: writing a new page and building it before
+      # committing would fail. Not worth it for a footer note.
+      strict: false
 
 # Nav structure:
 #   L1 = section (grouping header, not a page)
