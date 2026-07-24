@@ -127,6 +127,7 @@ plugins:
             Lab Code & Tools: 实验室代码和工具
             Datasets: 实验室和公共数据集
             How To: 如何做
+            LLM & Agents: 大模型与 Agent
             Interesting Labs: 有趣的实验室
             Journal Club: 文献俱乐部
   # "Last update" date in each page's footer, taken from the file's last commit.
@@ -178,6 +179,9 @@ nav:
       - 6-datasets/index.md
   - How To:
       - 7-how-to/index.md
+      - LLM & Agents:
+          - 7-how-to/7.1-llm-agents/index.md
+          - 7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code.md
   - Interesting Labs:
       - 8-interesting-labs/index.md
   - Journal Club:
