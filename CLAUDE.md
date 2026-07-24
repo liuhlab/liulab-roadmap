@@ -55,6 +55,12 @@ what doesn't earn its place, research the gaps. Sparse fields mean drafting
 more, not writing less. Always keep the issue's opinions and lab experience —
 that is the part no search can supply.
 
+**Draft banner** — Every agent-drafted page ships with a red draft box right
+under the H1, in both languages, marking it AI-generated and unreviewed:
+`!!! danger "Draft · not yet reviewed by a human"` /
+`!!! danger "草稿 · 尚未经过人工审阅"`. Never remove it on your own; take it out
+only when the user explicitly says that page can lose it.
+
 **Audience & voice** — Write for entry-level students (incoming PhDs, senior
 undergrads, master's) with no background in the topic. Talk to peers, not down
 to pupils: share what worked ("多数时候我们…"), don't instruct ("你应该…",
