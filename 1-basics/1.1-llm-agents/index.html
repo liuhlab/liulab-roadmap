@@ -450,6 +450,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-model-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The model underneath
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-this-comes-first" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1752,6 +1763,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-model-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The model underneath
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-this-comes-first" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1854,7 +1876,11 @@
 
 
 <h1 id="large-language-models-agent-tools">Large Language Models &amp; Agent Tools<a class="headerlink" href="#large-language-models-agent-tools" title="Permanent link">&para;</a></h1>
-<p>This is the first page of the roadmap on purpose. Not because these tools are exciting, but because they change what everything after them costs you. A question that used to mean a week of fighting with someone else's code can now be a conversation, and the bottleneck moves from "can I write the code" to "do I understand the problem." So this page is a map: why the tools are worth your time, what the confusingly similar ones actually are, how to start, and how to use them to amplify what you can do.</p>
+<p>This is the first page of the roadmap on purpose. Not because these tools are exciting, but because they change what everything after them costs you. A question that used to mean a week of fighting with someone else's code can now be a conversation, and the bottleneck moves from "can I write the code" to "do I understand the problem." So this page is a map: a quick look at the language model underneath, why the tools are worth your time, what the confusingly similar ones actually are, how to start, and how to use them to amplify what you can do.</p>
+<h2 id="the-model-underneath">The model underneath<a class="headerlink" href="#the-model-underneath" title="Permanent link">&para;</a></h2>
+<p>The engine inside every <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> is a <abbr title="A very large Transformer pre-trained on text, which is why it can be prompted to do tasks it was never explicitly trained on">large language model</abbr> (<abbr title="Large language model: a very large Transformer pre-trained on text, promptable for tasks it was never explicitly trained on">LLM</abbr>), and it earns a few paragraphs up front. What it has learned to do is almost disappointingly simple: after reading an enormous amount of text, given everything so far, guess which word comes next. The fluent answers in a chat window are what that guessing game looks like after a trillion rounds of practice. Keep this in mind and a lot of later strangeness makes sense. The model is not a database, so nothing it says is guaranteed true, and it has no lasting memory beyond the context window you show it, a term that will keep coming up on this page. When an agent confidently states something false, or seems to become a different person late in a long session, the root cause is one of those two facts.</p>
+<p>The way people use these models has changed shape a few times. First came the chatbot era, one question for one answer, where the skill worth studying was writing a good prompt; prompt engineering is a word from that period. Then models learned to think before answering, and reasoning models turned "work through it step by step" from a prompt trick into a built-in habit, so careful phrasing mattered less. The most recent change put the model in a loop with tools, letting it read files, run commands, look at what came back, and decide what to do next. That is an agent. The human skill moved with it: away from crafting the perfect sentence, toward setting up a good environment with a clear goal, capable tools, and a way for the agent to check its own work. The "delegate, don't dictate" advice later on this page is the everyday version of that shift.</p>
+<p>If you want these foundations in one sitting, set aside half an hour for <a href="https://www.aihero.dev/llm-fundamentals">LLM Fundamentals</a>. It runs interactively in the browser with nothing to install, and it covers the layer underneath everything above: what a system prompt really does, why the model thinks in numbers rather than words, why overstuffing the context window backfires, and why too many tools slow a model down. A short list of concepts, but each one will come up daily.</p>
 <h2 id="why-this-comes-first">Why this comes first<a class="headerlink" href="#why-this-comes-first" title="Permanent link">&para;</a></h2>
 <p>A <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> is a program that takes a goal in plain language, then reads files, runs commands, and edits code on its own until the goal is met or it gets stuck. Paired with the command line and git, it turns the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> from a wall into something you can talk to.</p>
 <p>This matters whether you do experiments or write code, for two reasons. First, a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> runs anywhere, not only in a folder full of code. <a href="https://code.claude.com/docs/en/common-workflows">Anthropic's docs</a> point out it works as well in a folder of notes or manuscripts as in a repository, and this site, including the page you are reading, was written that way. There is a walk-through in <a href="../../7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/">Writing This Site With Claude Code</a>. Second, the barrier really does seem to be understanding rather than coding. Across roughly 400,000 sessions, <a href="https://www.anthropic.com/research/claude-code-expertise">Anthropic found</a> that domain expertise, not coding skill, was what separated people who got useful results from people who did not. That number comes from the company selling the tool and rests on a metric they designed, so take it with a grain of salt. The independent version of the same signal: in January 2026, MIT dedicated a session of <a href="https://missing.csail.mit.edu/">Missing Semester</a> to agentic coding. A university opening a course on a topic says plenty about how much it matters.</p>
@@ -1966,7 +1992,6 @@
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>: the best short case for keeping agent setups simple, and it reads well once the vocabulary above has stopped being a fog.</li>
-<li><a href="https://www.aihero.dev/llm-fundamentals">LLM Fundamentals</a>: a short interactive tutorial that runs entirely in the browser, covering what a system prompt really does, why the model thinks in numbers rather than words, and why overstuffing the context window backfires. Half an hour here, before you start driving an agent, clears up a lot of later confusion.</li>
 <li><a href="https://learn.shareai.run/zh/">learn.shareai.run</a>: a natively Chinese course on why Claude Code behaves the way it does. Deep, close to a source-code-level dissection of Claude, for when you want the principles.</li>
 <li>MIT's <a href="https://missing.csail.mit.edu/">Missing Semester</a>, the January 2026 session: dedicated to agentic coding, and a good way to walk the whole toolchain end to end.</li>
 <li>The official docs are what you will keep coming back to: <a href="https://code.claude.com/docs/en/overview">Claude Code docs</a>, <a href="https://www.kimi.com/code/docs/en/">Kimi Code docs</a>, <a href="https://zcode.z.ai/cn">Z Code docs</a>.</li>
@@ -1991,7 +2016,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:45:21 CST">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:53:22 CST">July 26, 2026</span>
   </span>
 
     

@@ -453,7 +453,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        为什么它是第一项基础技能
+        先认识大语言模型
       
     </span>
   </a>
@@ -464,7 +464,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三样长得很像的东西
+        为什么它是第一项基础技能
       
     </span>
   </a>
@@ -475,7 +475,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        从哪里上手
+        三样长得很像的东西
       
     </span>
   </a>
@@ -486,7 +486,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        怎么跟它好好说话
+        从哪里上手
       
     </span>
   </a>
@@ -497,7 +497,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        你会反复听到的几个词
+        怎么跟它好好说话
       
     </span>
   </a>
@@ -508,7 +508,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        系统地学一遍
+        你会反复听到的几个词
       
     </span>
   </a>
@@ -517,6 +517,17 @@
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统地学一遍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         延伸阅读
@@ -1755,7 +1766,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        为什么它是第一项基础技能
+        先认识大语言模型
       
     </span>
   </a>
@@ -1766,7 +1777,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三样长得很像的东西
+        为什么它是第一项基础技能
       
     </span>
   </a>
@@ -1777,7 +1788,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        从哪里上手
+        三样长得很像的东西
       
     </span>
   </a>
@@ -1788,7 +1799,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        怎么跟它好好说话
+        从哪里上手
       
     </span>
   </a>
@@ -1799,7 +1810,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        你会反复听到的几个词
+        怎么跟它好好说话
       
     </span>
   </a>
@@ -1810,7 +1821,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        系统地学一遍
+        你会反复听到的几个词
       
     </span>
   </a>
@@ -1819,6 +1830,17 @@
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统地学一遍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         延伸阅读
@@ -1854,12 +1876,16 @@
 
 
 <h1 id="agent">大语言模型与 Agent 工具应用<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h1>
-<p>把这一页放在整个学习路线的第一站，是有意安排的。倒不是因为这些工具时髦，而是它们实实在在改变了后面每一样学习的代价。过去遇到一个问题，可能得跟别人的代码耗上一个星期，如今很多时候就是一场对话的事。真正卡脖子的地方，于是从"能不能把代码写出来"挪到了"有没有把问题想明白"。接下来我们会简单聊聊：这类工具为什么值得花功夫学，几个名字长得很像的东西分别是什么，从哪里上手，以及怎么用它放大自己的能力。</p>
-<h2 id="_1">为什么它是第一项基础技能<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>把这一页放在整个学习路线的第一站，是有意安排的。倒不是因为这些工具时髦，而是它们实实在在改变了后面每一样学习的代价。过去遇到一个问题，可能得跟别人的代码耗上一个星期，如今很多时候就是一场对话的事。真正卡脖子的地方，于是从"能不能把代码写出来"挪到了"有没有把问题想明白"。接下来我们会先认识底下的<abbr title="在海量文本上预训练出来的超大 Transformer，所以能被提示去做它从没被专门训练过的任务">大语言模型</abbr>，再聊聊这类工具为什么值得花功夫学，几个名字长得很像的东西分别是什么，从哪里上手，以及怎么用它放大自己的能力。</p>
+<h2 id="_1">先认识大语言模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 的发动机是<abbr title="在海量文本上预训练出来的超大 Transformer，所以能被提示去做它从没被专门训练过的任务">大语言模型</abbr>（large language model，<abbr title="大语言模型：在海量文本上预训练的超大 Transformer，能被提示去做没专门训练过的任务">LLM</abbr>），值得先花一点篇幅认识它。它学会的本事说起来只有一样：读了海量的文字之后，给定前面的话，猜下一个词最可能是什么。聊天窗口里那些对答如流，就是这个接龙游戏训练了亿万次之后的样子。记住这一点，后面的很多怪事就好解释了：它不是数据库，说出来的话不保证是真的；它也没有长久的记忆，每次能看到的只有你发给它的那一窗内容，也就是后面会反复提到的上下文窗口。agent 偶尔一本正经地胡说，或者聊久了像换了个人，根子都在这两条上。</p>
+<p>用它的人，这几年换了三茬打法。最早是聊天机器人时代，一个问题换一个回答，值得钻研的是怎么把提示词写好，prompt engineering 这个词就是那个年代的产物。后来模型学会了先想再答，推理模型把"一步一步来"从提示词技巧变成了内建的习惯，字斟句酌这件事本身就不那么要紧了。最近的一次变化是把模型放进循环里，给它工具，让它自己读文件、跑命令、看结果、再决定下一步，这就是 agent。人的功夫也跟着挪了地方：从琢磨一句话的措辞，挪到搭一个好用的环境，给清楚的目标、趁手的工具，再加一个能自我检查的抓手。这一页后面讲的"交办而不是口述"，就是这个新打法的日常版本。</p>
+<p>想把这些底子一次补齐，可以花半小时过一过 <a href="https://www.aihero.dev/llm-fundamentals">LLM Fundamentals</a>（英文）。它在浏览器里交互着学，不用装任何东西，讲的正是上面这几件事的更底层：system prompt 到底起什么作用，模型为什么是用数字"思考"的，上下文塞太满为什么反而坏事，工具给太多为什么会变慢。概念不多，但每一个都是以后天天要打的交道。</p>
+<h2 id="_2">为什么它是第一项基础技能<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 是这样一类程序：你用大白话交代一个目标，它就自己去读文件、跑命令、改代码，一直干到目标达成，或者干不下去为止。再配上命令行和 git，那个原本让人望而生畏的黑色窗口，就成了一个可以商量事情的伙伴。</p>
 <p>这件事不管对做实验的还是写程序的，意义都很大，理由有两个。一是 <abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 不挑地方，不是非得待在代码仓库里才能干活。<a href="https://code.claude.com/docs/zh-CN/common-workflows">Anthropic 的文档</a>特意提到，一个装满笔记和手稿的文件夹，对它来说同样好用。这个网站，包括你正在看的这一页，就是这么写出来的，具体过程记在<a href="../../7-how-to/7.1-llm-agents/7.1.1-writing-with-claude-code/">用 Claude Code 写这个网站</a>。二是真正的门槛多半不在写代码，而在理解。<a href="https://www.anthropic.com/research/claude-code-expertise">Anthropic 分析了</a>大约 40 万次会话后发现，把用得好和用不好的人区分开的，是各自领域的专业功底，而不是编程水平。MIT 在 2026 年 1 月开了一期专门讲 agentic coding 的<a href="https://missing.csail.mit.edu/">《Missing Semester》</a>，能为这个话题专门开一门课，本身就说明它确实重要。</p>
 <p>对咱们实验室来说，这些工具已经是必须掌握的东西。2026 年年中发布的 <a href="https://claude.com/product/claude-science">Claude Science</a> 自带基因组学、单细胞、结构生物学的工具，还能通过 <abbr title="一种通过网络安全登录另一台计算机、并在上面执行命令的方式，常用来连接远程服务器或计算集群">SSH</abbr> 操作 <abbr title="一套由许多联网机器组成的共享高性能计算系统，你把繁重的任务发过去跑，而不是压在自己的笔记本上">HPC 集群</abbr>，用 <code>sbatch</code> 提交作业，而不是图省事在<abbr title="连上集群后最先落脚的那台共享机器，用来编辑文件、提交作业，而不是用来跑繁重计算">登录节点</abbr>上直接跑。<a href="https://www.edisonscientific.com/">Edison Scientific</a> 的 Kosmos 则是另一个方向，定位就是"AI 科学家"：自己读文献、分析数据、提出假设，面向生物医药的研发。用不用这些产品另说，可以预见，这类工具以后会越来越普及。</p>
-<h2 id="_2">三样长得很像的东西<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">三样长得很像的东西<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>刚开始最值得理清的一件事："聊天机器人""<abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr>"，再加上 OpenClaw、Hermes 那一类，看起来是三个同类型的产品，其实不是。它们是同一个模型穿了三件厚薄不同的外衣。模型是同一个，而且不管套哪件外衣，它都跑在数据中心里，不在你的电脑上。真正变的是外面那层 <abbr title="包在模型外面的那层工具、上下文管理和执行环境，把模型变成 agent；Claude Code 是 harness，Claude 是里面的模型">harness</abbr>（外壳），也就是它能调用哪些工具、被允许碰到你手上的哪些东西。</p>
 <pre class="mermaid"><code>flowchart TB
     C1["&lt;b&gt;网页聊天机器人&lt;/b&gt;&lt;br/&gt;&lt;i&gt;只看得到你粘进去的内容&lt;/i&gt;"] --- M
@@ -1911,17 +1937,17 @@
 </table>
 <p>这个分类法值得记住，因为表里这几条属性，既决定了本事大小，也决定了闯祸规模。聊天机器人删不掉你的文件，因为它根本看不见；<abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 看得见也动得了，所以才一定要在 git 里用它，这样它的每一处改动都是一段 <abbr title="一个文件前后两个版本之间逐行的改动，git 给你看的就是它，也正是靠它才能把改动撤销">diff</abbr>，你能逐行读，也能一键退回。<a href="https://github.com/openclaw/openclaw">OpenClaw</a>、<a href="https://github.com/NousResearch/hermes-agent">Hermes</a> 这类 agent 助手走得更远，把模型接进邮件、聊天和日历，不用等你发话就能自己动手。方向确实是朝那边走的，不过这类工具眼下还不成熟，可以慢慢了解，用的时候多留个心眼。</p>
 <p>想把底下的概念弄清楚，有两篇短文最省事：Simon Willison 给 agent 下的<a href="https://simonwillison.net/2025/Sep/18/agents/">一句话定义</a>（agent 就是让大模型在循环里调用工具去达成目标），以及 Anthropic 的 <a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>。中文材料里，<a href="https://www.bilibili.com/video/BV1ojfDBSEPv/">一口气拆穿 Skill/MCP/RAG/Agent 底层逻辑</a>这个视频用十五分钟讲了同样的事，而且直击要害：这些词人人挂在嘴边，却没几个人真的给它们下过定义。</p>
-<h2 id="_3">从哪里上手<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">从哪里上手<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>上手很简单，打开<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>装一个就能开始。Anthropic 的<a href="https://code.claude.com/docs/zh-CN/setup">安装指南</a>会带你走一遍流程，<a href="https://code.claude.com/docs/zh-CN/quickstart">快速上手</a>从安装讲到第一次真正的改动；从没碰过命令行的话，还有一份专门的<a href="https://code.claude.com/docs/zh-CN/terminal-guide">终端指南</a>。</p>
 <p>Claude Code 也不是唯一的选择，同类工具还有 <a href="https://www.kimi.com/code/docs/">Kimi Code</a>、智谱的 <a href="https://zcode.z.ai/">Z Code</a> 等，思路和用法大同小异。Kimi Code 在<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里一行命令就能装好（<code>curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash</code>），装完输入 <code>kimi</code> 就能开始。这一页讲的概念和习惯在哪家工具上都通用，先挑一个顺手的用熟，比纠结选哪个更重要。</p>
 <p>不过<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>迟早值得认真学，git 和集群都住在<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里，"看着 agent 干活"和"自己能检查它干得对不对"之间，隔的也就是这一层。如果要深入学习<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>，<a href="../1.2-linux-git/">Linux、Git 与 GitHub 基础</a>那一页讲 <abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr> 和<abbr title="把一个文件夹的历史记录成一串快照的做法，任何早先的状态都能找回">版本控制</abbr>，<a href="../1.3-python/">Python 基础</a>讲实验室大部分分析在用的语言。</p>
 <p>再说句实在话：好用的 <abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 都是收费的，但这个钱值得花，实验室全力支持大家在这上面的开销。</p>
-<h2 id="_4">怎么跟它好好说话<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">怎么跟它好好说话<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>从聊天机器人转过来的人，大多带着同一个习惯：字斟句酌写一条又长又细的指令，然后听天由命。对 agent 来说，这套思路基本是反的。有两个习惯，比任何措辞技巧都管用。</p>
 <p>第一个是把活交办出去，而不是一句句口述。把整个项目和目标一起交给它，让它自己去翻文件、搜东西、动手试，而不是把几段代码粘进对话框，再描述你想怎么处理它们。它本来就是在"<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里四处翻看"这种用法上练出来的，放手让它自己看，比你逐句讲给它听，能做成的事多得多。</p>
 <p>第二个是给它一个能自我检查的抓手。agent 觉得活干完了就会停，所以只要留一个能跑的测试、一个要过的构建，它就会一直干到检查通过，而不是反过来等你当那个报错信息。就这一个习惯换来的可靠性，胜过任何遣词造句的窍门。</p>
 <p>具体细节，看三份材料就够了。Anthropic 的<a href="https://platform.claude.com/docs/zh-CN/build-with-claude/prompt-engineering/overview">提示最佳实践</a>是最权威的参考，篇幅比你想象的短。<a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践</a>那篇有前后对照的例子，还有一个很值得学的招：开工之前，先让 agent 就这个任务反过来采访你，把需求写成文档再动手。想学思路而不是句式的话，Anthropic Academy 有门免费的 <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations">AI Fluency</a> 课，整门课讲的就是怎么交办、怎么判断，而不是提示词配方。至于任何号称传授"魔法咒语清单"的材料，不管哪种语言写的，都可以直接跳过，在现在的模型上，那套东西基本已经过时了。</p>
-<h2 id="_5">你会反复听到的几个词<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">你会反复听到的几个词<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>有一小撮词会一遍遍出现。入门阶段都不用深究，想先把它们全弄懂再动手，反而容易原地踏步。下面每个词给一句话的解释，再附上"哪天它开始挡路了该去哪儿看"的出处。</p>
 <table>
 <thead>
@@ -1960,13 +1986,12 @@
 </tbody>
 </table>
 <p>实验室自己也维护了<a href="https://liuhlab.github.io/liulab-compute-skills/">一套 Skills</a>，打包成一个 Claude Code 插件，见<a href="../../5-lab-code/5.1-routine-support/">常规实验室支持</a>。等你上手以后，工具就是从那儿开始，从"通用"变成"懂我们的数据"。</p>
-<h2 id="_6">系统地学一遍<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">系统地学一遍<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>想跟着课程系统地学一遍的话，推荐 DeepLearning.AI 与 Anthropic 合办的短课 <a href="https://www.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant">Claude Code: A Highly Agentic Coding Assistant</a>，由 Anthropic 的技术教育负责人主讲，从 CLAUDE.md、上下文管理一路讲到子 agent、hooks 和 <abbr title="一个开放标准（现由 Linux 基金会托管），让任意 agent 通过同一套接口连接数据库等外部系统">MCP</abbr>，中间穿插三个完整的项目练习，最好已经摸过一点 Python 和 git。<a href="https://www.bilibili.com/video/BV1RSFUzVEAG">B 站上有完整视频</a>。</p>
 <p>课里用的是 Claude Code，但学完不用怕被绑在这一家工具上：上下文管理、子 agent、hooks、<abbr title="一个开放标准（现由 Linux 基金会托管），让任意 agent 通过同一套接口连接数据库等外部系统">MCP</abbr> 这些概念在各家 <abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 上是通用的，换成 Kimi Code、Z Code 照样用得上。</p>
-<h2 id="_7">延伸阅读<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_8">延伸阅读<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>："把 agent 的架子搭简单点"这个主张最好的短论，等上面那套词不再是一团雾之后，读它正合适。</li>
-<li><a href="https://www.aihero.dev/llm-fundamentals">LLM Fundamentals</a>（英文）：浏览器里就能交互着学的短教程，讲 system prompt 到底起什么作用、模型为什么是用数字思考的、上下文塞太满为什么反而坏事。开始使唤 agent 之前花半小时过一遍，后面很多迷惑会自己解开。</li>
 <li><a href="https://learn.shareai.run/zh/">learn.shareai.run</a>：原生中文的课，讲透 Claude Code 为什么会这样做事。内容比较深，近乎从源码层面拆解 Claude，适合想往原理里钻的时候看。</li>
 <li>MIT <a href="https://missing.csail.mit.edu/">《Missing Semester》</a> 2026 年 1 月那一期：专门讲 agentic coding，顺着它把工具链系统过一遍很合适。</li>
 <li>各家官方文档是日常最常回去查的地方：<a href="https://code.claude.com/docs/zh-CN/overview">Claude Code 文档</a>、<a href="https://www.kimi.com/code/docs/">Kimi Code 文档</a>、<a href="https://zcode.z.ai/cn">Z Code 文档</a>。</li>
@@ -1991,7 +2016,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年7月26日 01:45:21 CST">2026年7月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年7月26日 01:53:22 CST">2026年7月26日</span>
   </span>
 
     
