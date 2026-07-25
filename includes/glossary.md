@@ -49,6 +49,7 @@ Two rules:
 *[ATAC-seq]: An assay that reads which stretches of DNA are open and accessible across the genome
 *[ChIP-seq]: An assay that reads where a particular protein sits on the genome
 *[CAGE]: An assay that reads where transcription starts, by capturing the 5' ends of RNAs
+*[FASTQ]: The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base
 *[coding agent]: A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions
 *[harness]: The tools, context management and execution environment wrapped around a model to make it an agent; Claude Code is the harness, Claude is the model inside it
 *[MCP]: An open standard, now stewarded by the Linux Foundation, that lets any agent connect to outside systems such as databases through one common interface
@@ -60,3 +61,5 @@ Two rules:
 *[shell]: The program inside the terminal that reads each command you type and runs it, such as bash or zsh
 *[version control]: Recording the history of a folder as a series of snapshots, so any earlier state can be recovered
 *[commit]: One snapshot in a git history, saved with a message explaining why the change exists
+*[PR]: Short for pull request: a proposal to merge your changes into another history, with room for review
+*[CI]: Continuous integration: a service that automatically builds, tests, and checks your code on every push
