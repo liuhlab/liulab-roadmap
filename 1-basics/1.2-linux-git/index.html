@@ -427,6 +427,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux, Git &amp; GitHub Basics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -443,6 +461,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-terminal-is-still-worth-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the terminal is still worth learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning the shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-the-lab-notebook-for-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git, the lab notebook for code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-gitee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub, and Gitee
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-these-with-an-agent-beside-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning these with an agent beside you
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1631,6 +1734,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-terminal-is-still-worth-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the terminal is still worth learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning the shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-the-lab-notebook-for-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git, the lab notebook for code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-gitee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub, and Gitee
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-these-with-an-agent-beside-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning these with an agent beside you
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1655,13 +1832,52 @@
 
 
 <h1 id="linux-git-github-basics">Linux, Git &amp; GitHub Basics<a class="headerlink" href="#linux-git-github-basics" title="Permanent link">&para;</a></h1>
-<p>The command line, version control, and collaboration skills every lab member uses day to day.</p>
-<div class="admonition note">
-<p class="admonition-title">Under construction</p>
-<p>This overview is being written. It will map out which parts of this topic
-matter most for the lab's work — the key concepts, a sensible learning
-order, and the best resources to start from.</p>
+<div class="admonition danger">
+<p class="admonition-title">Draft · not yet reviewed by a human</p>
+<p>An AI agent wrote this whole page. A human has not yet checked or revised
+it, so treat everything here as provisional until this notice comes down.</p>
 </div>
+<p>The command line, git, and GitHub are the foundation of the lab's daily workflow: typed commands drive the computing on our servers, git records every change, and GitHub shares that history with other people. Sharpening these tools pays for itself; together with Python they are what all our computing and analysis runs on, and Python gets its own page in <a href="../1.3-python/">Python Basics</a>. These three are also the skills a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> leans on hardest, so the point of learning them has shifted: not memorizing commands, but reading what the agent did and judging whether it was necessary. This page picks out the basics worth learning, a few entry-level resources, and a few places to check whether the material actually stuck.</p>
+<h2 id="why-the-terminal-is-still-worth-learning">Why the terminal is still worth learning<a class="headerlink" href="#why-the-terminal-is-still-worth-learning" title="Permanent link">&para;</a></h2>
+<p>The reasons are practical. First, most of the lab's computing does not happen on your laptop: sequencing data is too big and alignment too slow, so the work runs on servers and clusters that have no desktop and no mouse, and what greets you after you log in over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> is a <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>. Second, most bioinformatics tools have no graphical interface at all, so using them means typing commands. Third, typing is where the efficiency comes from: the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>'s idea is to chain small single-purpose tools with pipes, each one's output feeding the next, so "count how often each sequence occurs across a pile of <abbr title="The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base">FASTQ</abbr> files and list the top ten" is one line of <code>grep</code>, <code>sort</code> and <code>uniq</code>, while opening those files in an editor stops being possible once they reach tens of gigabytes. Commands saved in a script can also be rerun anytime and handed to someone else exactly as they were.</p>
+<p>Two words people mix up constantly: the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> is the window on your screen, and the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr> is the program inside it that reads what you type and runs it, usually bash or zsh. Linux is the operating system nearly all of these machines run, which is why "learning Linux" and "learning the command line" are, for our purposes, the same thing.</p>
+<p>The arrival of <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agents</abbr> has made all this more central, not less. Agents were trained on exactly this world of <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminals</abbr> and text streams, so the command line is where they are strongest, as <a href="../1.1-llm-agents/">the previous page</a> describes. What becomes scarce is the ability to read commands rather than type them: knowing what <code>rm -rf</code> does before letting it run, and being able to tell whether the agent's one-liner answers the question you asked or some other question.</p>
+<h2 id="learning-the-shell">Learning the shell<a class="headerlink" href="#learning-the-shell" title="Permanent link">&para;</a></h2>
+<p>The order that works, in our experience, is files first, streams second, remote machines third. Start with moving around and looking at things: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>less</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>. Then learn to think in streams: pipes, redirection, <code>grep</code>, <code>wc</code>, and a loop for the moment you catch yourself running the same command ten times. Only then go remote with <code>ssh</code> and <code>scp</code>, which is also when the cluster stops being an abstraction. That much is honestly enough for daily lab work; a script, meaning a string of commands saved in a file for the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr> to run from top to bottom, will suggest itself once you are tired of retyping.</p>
+<p>For a first course we like Data Carpentry's <a href="https://datacarpentry.github.io/shell-genomics/">shell-genomics</a>: it teaches exactly these skills inside a genomics project, on real <abbr title="The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base">FASTQ</abbr> files from an E. coli variant-calling dataset, so every command comes with a reason to care. It does expect the workshop's cloud setup, which takes some work to recreate on your own; if you'd rather start with zero preparation on your own laptop, pick Software Carpentry's <a href="https://swcarpentry.github.io/shell-novice/">shell-novice</a>, which runs locally with a small download and takes an afternoon. Either way, keep 阮一峰's <a href="https://wangdoc.com/bash/">Bash 脚本教程</a> open on the side as the Chinese reference you look things up in. That is the whole reading list; depth can wait until a real problem asks for it.</p>
+<p>Knowing whether it stuck is its own step, and three free sites check you at increasing levels of realism. <a href="https://linuxsurvival.com/">Linux Survival</a> ends each short module with a quiz that asks you to type the right command, good for a ten-minute recall check. <a href="https://cmdchallenge.com/">cmdchallenge</a> gives you one puzzle per command in a browser <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> and verifies your answer automatically, no account needed. <a href="https://overthewire.org/wargames/bandit/">OverTheWire's Bandit</a> is the capstone: you log into a real server over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> and each level's password unlocks the next, so progress is proof. Levels 0 to 15 cover the basics on this page, and being able to do them without looking things up is a solid working definition of "I know the command line."</p>
+<p>One more suggestion, the fun kind. <a href="https://store.steampowered.com/app/365450/Hacknet/">Hacknet</a> is a story-driven hacking game, cheap on Steam and officially localized into Simplified Chinese, played entirely by typing into a <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr>. Its everyday commands are real Unix, <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>rm</code>, <code>ps</code>, <code>kill</code>, and the campaign doubles as a tutorial that introduces them one at a time. The hacking itself is simplified fantasy and there are no pipes or permissions, so what it teaches is comfort with the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> rather than security skills. As a way to stop being afraid of the black window, it works surprisingly well.</p>
+<h2 id="git-the-lab-notebook-for-code">Git, the lab notebook for code<a class="headerlink" href="#git-the-lab-notebook-for-code" title="Permanent link">&para;</a></h2>
+<p>Git is a <abbr title="Recording the history of a folder as a series of snapshots, so any earlier state can be recovered">version control</abbr> system: it records the history of a folder as a series of <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commits</abbr>, each one a snapshot with a message explaining why it exists. Once a project is in git, "I broke something and I don't know when" stops being scary, because every earlier state is one command away. Branches let you try an idea in a parallel draft without touching the working version. And for working with a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr>, git is what makes delegation safe: every change the agent makes is a <abbr title="The exact line-by-line changes between two versions of a file, which is what git shows you and what lets you undo them">diff</abbr> you can read and revert, which is exactly why <a href="../1.1-llm-agents/">the previous page</a> insists on running agents inside git.</p>
+<p>The mental model worth building early is that your code exists in four places at once:</p>
+<pre class="mermaid"><code>flowchart LR
+    A["&lt;b&gt;Working folder&lt;/b&gt;&lt;br/&gt;&lt;i&gt;the files you edit&lt;/i&gt;"] -- "git add" --&gt; B["&lt;b&gt;Staging area&lt;/b&gt;&lt;br/&gt;&lt;i&gt;the next snapshot being assembled&lt;/i&gt;"]
+    B -- "git commit" --&gt; C["&lt;b&gt;Local repository&lt;/b&gt;&lt;br/&gt;&lt;i&gt;the full history on your machine&lt;/i&gt;"]
+    C -- "git push" --&gt; D["&lt;b&gt;Remote&lt;/b&gt;&lt;br/&gt;&lt;i&gt;GitHub or Gitee&lt;/i&gt;"]
+    D -- "git pull" --&gt; C</code></pre>
+<p><em>Figure: the four places a change passes through. Most confusion with git is confusion about which of these you are looking at.</em></p>
+<p>For learning, two resources cover the basics. <a href="https://liaoxuefeng.com/books/git/introduction/index.html">廖雪峰的 Git 教程</a> is the standard Chinese first read: zero assumed background, command by command with screenshots, deliberately limited to the commands you actually need. Then <a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a>, an interactive sandbox with an animated <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commit</abbr> tree and a full Chinese interface. Branching and merging are where tutorials stop helping and intuition has to grow, and nothing grows it faster.</p>
+<p>Learn Git Branching doubles as the self-check: each level shows a target <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commit</abbr> tree and only passes when yours matches the goal, so finishing the main and remote <abbr title="One number per genomic position from one assay in one cell type — the coverage profile a sequence model is trained to reproduce">tracks</abbr> means the skill is really there. To prove it transfers to the real thing, <a href="https://gitexercises.fracz.com/">gitexercises.fracz.com</a> gives you a local repository and grades your work server-side each time you run <code>git verify</code>. Those two passing you is a better signal than any amount of rereading.</p>
+<h2 id="github-and-gitee">GitHub, and Gitee<a class="headerlink" href="#github-and-gitee" title="Permanent link">&para;</a></h2>
+<p>GitHub is where the remote in that diagram usually lives, but it earns its place for a different reason: it is where open science happens. Nearly every tool and dataset this roadmap mentions lives there as a public repository with its code, its issues, and its discussions attached, and reading a tool's repository is a research skill in itself. The two constructs to learn are the pull request, a proposal to merge your changes into another history with room for review, and the issue, a tracked thread for a bug or a plan.</p>
+<p>If you don't have accounts yet, go register on GitHub and Gitee first; the exercises below all happen in your own account. The fastest way in is GitHub's own <a href="https://docs.github.com/en/get-started/quickstart/hello-world">Hello World</a>, a ten-minute exercise done entirely in the browser, no installation, that walks through repository, branch, <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commit</abbr>, and pull request. Then let <a href="https://skills.github.com/">GitHub Skills</a> check you: its free courses run inside your own account and a bot reviews each step of your work automatically, so finishing the Introduction to GitHub course is itself the proof you can handle the workflow.</p>
+<p>From mainland China, GitHub is reachable but often slow, and <a href="https://gitee.com/">Gitee</a>, run by OSChina, is the domestic alternative worth knowing. It speaks exactly the same git, so clone, push, branches, and pull requests all work as you would expect, and a repository can have both as remotes: push to GitHub for the world, and to Gitee for fast access at home. The honest caveats: publishing a public repository on Gitee requires passing a content review, its Pages hosting service has shut down, and the global open-source community, meaning the tools and people you will actually collaborate with, is on GitHub. Learn git and GitHub as the real skill, and treat Gitee as a fast mirror rather than a replacement.</p>
+<p>One official tool is worth installing: the <a href="https://cli.github.com/">GitHub CLI</a> (the <code>gh</code> command), which brings GitHub into the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr>, so cloning a repo, reading issues, opening a pull request, or checking <abbr title="Continuous integration: a service that automatically builds, tests, and checks your code on every push">CI</abbr> status no longer needs a browser. Run <code>gh auth login</code> once after installing, and the point goes beyond saving yourself a few clicks: from then on a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> can run <code>gh</code> as you, and most git-plus-GitHub work, from creating repos and pushing code to opening <abbr title="Short for pull request: a proposal to merge your changes into another history, with room for review">PRs</abbr> and answering issues, can be delegated to it while you watch the commands go by. Gitee has no official counterpart so far, but the heavy daily operations (clone, push, pull) are plain standard git anyway, so an agent can do those for you just the same; only platform features like issues and <abbr title="Short for pull request: a proposal to merge your changes into another history, with room for review">PRs</abbr> need the browser.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Every tool mentioned on this page, from <code>gh</code> to Oh My Zsh and iTerm2 in Further reading, can be installed by simply telling your <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> in plain language: "install this for me." Downloading, installing, and configuring are its job. That is exactly why the agent sits on the <a href="../1.1-llm-agents/">first page</a> of this roadmap.</p>
+</div>
+<h2 id="learning-these-with-an-agent-beside-you">Learning these with an agent beside you<a class="headerlink" href="#learning-these-with-an-agent-beside-you" title="Permanent link">&para;</a></h2>
+<p>A <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> changes the economics of everything on this page. It can write the <code>find</code> pipeline you half-remember, and it reads git's error messages better than most of us ever will. What it cannot do is know whether the command it just proposed is safe to run on data you cannot regenerate. So the skills worth sharpening are the supervisory ones: reading a <abbr title="The exact line-by-line changes between two versions of a file, which is what git shows you and what lets you undo them">diff</abbr> before committing it, pausing at anything that deletes or overwrites, and insisting the agent work inside git so every step stays undoable.</p>
+<p>Two habits make the pairing work well. The first is to make the agent your tutor: when it runs a command you do not know, ask it to explain the command flag by flag, or paste it into <a href="https://explainshell.com/">explainshell</a>. It is a patient teacher, and the explanation arrives attached to your actual problem. The second is to <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commit</abbr> more often than feels necessary. With an agent editing at machine speed, the <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commit</abbr> is the unit of undo, and small frequent <abbr title="One snapshot in a git history, saved with a message explaining why the change exists">commits</abbr> are what let you say "that last idea was wrong" without losing the afternoon.</p>
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> by William Shotts: the book-length version of the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr> section, free as a PDF, with a community Chinese translation, <a href="https://billie66.github.io/TLCL/">快乐的 Linux 命令行</a>. For when a real problem starts asking for depth.</li>
+<li><a href="https://git-scm.com/book/zh/v2">Pro Git</a>: the official reference, free, in Chinese. The first three chapters cover daily life; the rest can wait.</li>
+<li>码农高天's <a href="https://www.bilibili.com/video/BV19e4y1q7JJ">十分钟学会正确的 GitHub 工作流</a> (Chinese, bilibili): a professional programmer walks through the GitHub workflow open-source authors actually use to maintain code, in ten minutes.</li>
+<li><a href="https://ohmyz.sh/">Oh My Zsh</a>: a configuration framework for zsh that gets you themes, better completion, and a pile of ready-made plugins; makes the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> much nicer to live in.</li>
+<li><a href="https://iterm2.com/">iTerm2</a>: the replacement <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> for macOS, much stronger on split panes, search, and shortcuts; on Windows the counterpart is Microsoft's own <a href="https://aka.ms/terminal">Windows Terminal</a>.</li>
+</ul>
 
 
 
@@ -1682,7 +1898,7 @@ order, and the best resources to start from.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2026 05:06:42 CST">July 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:24:42 CST">July 26, 2026</span>
   </span>
 
     

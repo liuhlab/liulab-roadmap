@@ -1886,13 +1886,13 @@
 <tr>
 <td>外壳跑在哪儿</td>
 <td>厂商的服务器上，你只开一个浏览器标签页</td>
-<td>你的机器上，终端或编辑器里</td>
+<td>你的机器上，<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>或编辑器里</td>
 <td>你的机器上，在后台运行</td>
 </tr>
 <tr>
 <td>能碰到什么</td>
 <td>只有你粘进去的东西</td>
-<td>你的工作目录、shell 和 git</td>
+<td>你的工作目录、<abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr> 和 git</td>
 <td>你整台机器和各种账号</td>
 </tr>
 <tr>
@@ -1912,13 +1912,13 @@
 <p>这个分类法值得记住，因为表里这几条属性，既决定了本事大小，也决定了闯祸规模。聊天机器人删不掉你的文件，因为它根本看不见；<abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 看得见也动得了，所以才一定要在 git 里用它，这样它的每一处改动都是一段 <abbr title="一个文件前后两个版本之间逐行的改动，git 给你看的就是它，也正是靠它才能把改动撤销">diff</abbr>，你能逐行读，也能一键退回。<a href="https://github.com/openclaw/openclaw">OpenClaw</a>、<a href="https://github.com/NousResearch/hermes-agent">Hermes</a> 这类 agent 助手走得更远，把模型接进邮件、聊天和日历，不用等你发话就能自己动手。方向确实是朝那边走的，不过这类工具眼下还不成熟，可以慢慢了解，用的时候多留个心眼。</p>
 <p>想把底下的概念弄清楚，有两篇短文最省事：Simon Willison 给 agent 下的<a href="https://simonwillison.net/2025/Sep/18/agents/">一句话定义</a>（agent 就是让大模型在循环里调用工具去达成目标），以及 Anthropic 的 <a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>。中文材料里，<a href="https://www.bilibili.com/video/BV1ojfDBSEPv/">一口气拆穿 Skill/MCP/RAG/Agent 底层逻辑</a>这个视频用十五分钟讲了同样的事，而且直击要害：这些词人人挂在嘴边，却没几个人真的给它们下过定义。</p>
 <h2 id="_3">从哪里上手<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>上手很简单，打开终端装一个就能开始。Anthropic 的<a href="https://code.claude.com/docs/zh-CN/setup">安装指南</a>会带你走一遍流程，<a href="https://code.claude.com/docs/zh-CN/quickstart">快速上手</a>从安装讲到第一次真正的改动；从没碰过命令行的话，还有一份专门的<a href="https://code.claude.com/docs/zh-CN/terminal-guide">终端指南</a>。</p>
-<p>Claude Code 也不是唯一的选择，同类工具还有 <a href="https://www.kimi.com/code/docs/">Kimi Code</a>、智谱的 <a href="https://zcode.z.ai/">Z Code</a> 等，思路和用法大同小异。Kimi Code 在终端里一行命令就能装好（<code>curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash</code>），装完输入 <code>kimi</code> 就能开始。这一页讲的概念和习惯在哪家工具上都通用，先挑一个顺手的用熟，比纠结选哪个更重要。</p>
-<p>不过终端迟早值得认真学，git 和集群都住在终端里，"看着 agent 干活"和"自己能检查它干得对不对"之间，隔的也就是这一层。如果要深入学习终端，<a href="../1.2-linux-git/">Linux、Git 与 GitHub 基础</a>那一页讲 shell 和版本控制，<a href="../1.3-python/">Python 基础</a>讲实验室大部分分析在用的语言。</p>
+<p>上手很简单，打开<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>装一个就能开始。Anthropic 的<a href="https://code.claude.com/docs/zh-CN/setup">安装指南</a>会带你走一遍流程，<a href="https://code.claude.com/docs/zh-CN/quickstart">快速上手</a>从安装讲到第一次真正的改动；从没碰过命令行的话，还有一份专门的<a href="https://code.claude.com/docs/zh-CN/terminal-guide">终端指南</a>。</p>
+<p>Claude Code 也不是唯一的选择，同类工具还有 <a href="https://www.kimi.com/code/docs/">Kimi Code</a>、智谱的 <a href="https://zcode.z.ai/">Z Code</a> 等，思路和用法大同小异。Kimi Code 在<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里一行命令就能装好（<code>curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash</code>），装完输入 <code>kimi</code> 就能开始。这一页讲的概念和习惯在哪家工具上都通用，先挑一个顺手的用熟，比纠结选哪个更重要。</p>
+<p>不过<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>迟早值得认真学，git 和集群都住在<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里，"看着 agent 干活"和"自己能检查它干得对不对"之间，隔的也就是这一层。如果要深入学习<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>，<a href="../1.2-linux-git/">Linux、Git 与 GitHub 基础</a>那一页讲 <abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr> 和<abbr title="把一个文件夹的历史记录成一串快照的做法，任何早先的状态都能找回">版本控制</abbr>，<a href="../1.3-python/">Python 基础</a>讲实验室大部分分析在用的语言。</p>
 <p>再说句实在话：好用的 <abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 都是收费的，但这个钱值得花，实验室全力支持大家在这上面的开销。</p>
 <h2 id="_4">怎么跟它好好说话<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>从聊天机器人转过来的人，大多带着同一个习惯：字斟句酌写一条又长又细的指令，然后听天由命。对 agent 来说，这套思路基本是反的。有两个习惯，比任何措辞技巧都管用。</p>
-<p>第一个是把活交办出去，而不是一句句口述。把整个项目和目标一起交给它，让它自己去翻文件、搜东西、动手试，而不是把几段代码粘进对话框，再描述你想怎么处理它们。它本来就是在"终端里四处翻看"这种用法上练出来的，放手让它自己看，比你逐句讲给它听，能做成的事多得多。</p>
+<p>第一个是把活交办出去，而不是一句句口述。把整个项目和目标一起交给它，让它自己去翻文件、搜东西、动手试，而不是把几段代码粘进对话框，再描述你想怎么处理它们。它本来就是在"<abbr title="显示文字、接收键盘输入的那个窗口，shell 就跑在它里面">终端</abbr>里四处翻看"这种用法上练出来的，放手让它自己看，比你逐句讲给它听，能做成的事多得多。</p>
 <p>第二个是给它一个能自我检查的抓手。agent 觉得活干完了就会停，所以只要留一个能跑的测试、一个要过的构建，它就会一直干到检查通过，而不是反过来等你当那个报错信息。就这一个习惯换来的可靠性，胜过任何遣词造句的窍门。</p>
 <p>具体细节，看三份材料就够了。Anthropic 的<a href="https://platform.claude.com/docs/zh-CN/build-with-claude/prompt-engineering/overview">提示最佳实践</a>是最权威的参考，篇幅比你想象的短。<a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践</a>那篇有前后对照的例子，还有一个很值得学的招：开工之前，先让 agent 就这个任务反过来采访你，把需求写成文档再动手。想学思路而不是句式的话，Anthropic Academy 有门免费的 <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations">AI Fluency</a> 课，整门课讲的就是怎么交办、怎么判断，而不是提示词配方。至于任何号称传授"魔法咒语清单"的材料，不管哪种语言写的，都可以直接跳过，在现在的模型上，那套东西基本已经过时了。</p>
 <h2 id="_5">你会反复听到的几个词<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
