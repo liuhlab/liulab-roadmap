@@ -56,3 +56,7 @@ Two rules:
 *[SSH]: A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster
 *[HPC cluster]: A shared high-performance computing system of many networked machines you send heavy jobs to, instead of running them on your laptop
 *[login node]: The shared entry-point machine you land on when you connect to a cluster, meant for editing and submitting jobs rather than running heavy computation
+*[terminal]: The window that shows text and takes your keystrokes; the shell runs inside it
+*[shell]: The program inside the terminal that reads each command you type and runs it, such as bash or zsh
+*[version control]: Recording the history of a folder as a series of snapshots, so any earlier state can be recovered
+*[commit]: One snapshot in a git history, saved with a message explaining why the change exists
