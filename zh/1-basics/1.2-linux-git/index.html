@@ -1832,11 +1832,6 @@
 
 
 <h1 id="linux-gitgithub">Linux 和 Git、GitHub 基础<a class="headerlink" href="#linux-gitgithub" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">草稿 · 尚未经过人工审阅</p>
-<p>这一整页由 AI agent 生成，还没有经过人工核对或修改。在本提示撤下之前，
-请把页面里的所有内容都当作暂定。</p>
-</div>
 <p>命令行、Git 和 GitHub 是实验室日常工作流的基础：敲命令驱动服务器上的计算，Git 记录每一次重要文件的改动，GitHub 把这份历史分享出去，变成协作。磨刀不误砍柴工，这几样加上 Python，就是我们做一切计算和分析的刀；Python 内容多，放在下一页 <a href="../1.3-python/">Python 基础</a> 里单独讲。这三样恰好也是 <abbr title="把大模型放进一个带工具的循环里运行的程序，它能读你的文件、执行命令、直接改代码，而不只是回答问题">coding agent</abbr> 最依赖的技能，所以学的重点不再是背命令，而是读懂 agent 干了什么，判断它做的事情是否必要。这一页挑出值得学的基础，配几份入门材料，再给几个能检查自己是不是真会了的地方。</p>
 <h2 id="_1">为什么终端还值得认真学<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>理由都很实际。第一，实验室的计算大多不在你的笔记本上：测序数据太大，比对太慢，活都在服务器和集群上跑，那些机器没有桌面也没有鼠标，用 <abbr title="一种通过网络安全登录另一台计算机、并在上面执行命令的方式，常用来连接远程服务器或计算集群">SSH</abbr> 登录进去，迎接你的就是一个 <abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr>。第二，绝大多数生信工具根本没有图形界面，想用就得敲命令。第三，敲命令本身就是效率的来源：<abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr> 的思路是把只干一件事的小工具用管道串起来，上一个的输出直接喂给下一个，所以"从一堆 <abbr title="测序仪输出的原始数据格式，每条 read 占四行：标识、碱基序列、一个加号行，以及每个碱基的质量分">FASTQ</abbr> 文件里数出每条序列出现的次数、排出前十"这种事，在编辑器里没法做，在 <abbr title="终端里负责读出你输入的命令并执行的程序，常见的是 bash 和 zsh">shell</abbr> 里只是把 <code>grep</code>、<code>sort</code>、<code>uniq</code> 串起来的一行命令。敲过的命令存进脚本，也随时可以重跑，可以原样交给别人。</p>
@@ -1898,7 +1893,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年7月26日 01:24:42 CST">2026年7月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年7月26日 01:34:30 CST">2026年7月26日</span>
   </span>
 
     

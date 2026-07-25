@@ -1832,11 +1832,6 @@
 
 
 <h1 id="linux-git-github-basics">Linux, Git &amp; GitHub Basics<a class="headerlink" href="#linux-git-github-basics" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">Draft · not yet reviewed by a human</p>
-<p>An AI agent wrote this whole page. A human has not yet checked or revised
-it, so treat everything here as provisional until this notice comes down.</p>
-</div>
 <p>The command line, git, and GitHub are the foundation of the lab's daily workflow: typed commands drive the computing on our servers, git records every change, and GitHub shares that history with other people. Sharpening these tools pays for itself; together with Python they are what all our computing and analysis runs on, and Python gets its own page in <a href="../1.3-python/">Python Basics</a>. These three are also the skills a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> leans on hardest, so the point of learning them has shifted: not memorizing commands, but reading what the agent did and judging whether it was necessary. This page picks out the basics worth learning, a few entry-level resources, and a few places to check whether the material actually stuck.</p>
 <h2 id="why-the-terminal-is-still-worth-learning">Why the terminal is still worth learning<a class="headerlink" href="#why-the-terminal-is-still-worth-learning" title="Permanent link">&para;</a></h2>
 <p>The reasons are practical. First, most of the lab's computing does not happen on your laptop: sequencing data is too big and alignment too slow, so the work runs on servers and clusters that have no desktop and no mouse, and what greets you after you log in over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> is a <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>. Second, most bioinformatics tools have no graphical interface at all, so using them means typing commands. Third, typing is where the efficiency comes from: the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>'s idea is to chain small single-purpose tools with pipes, each one's output feeding the next, so "count how often each sequence occurs across a pile of <abbr title="The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base">FASTQ</abbr> files and list the top ten" is one line of <code>grep</code>, <code>sort</code> and <code>uniq</code>, while opening those files in an editor stops being possible once they reach tens of gigabytes. Commands saved in a script can also be rerun anytime and handed to someone else exactly as they were.</p>
@@ -1898,7 +1893,7 @@ it, so treat everything here as provisional until this notice comes down.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:24:42 CST">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:34:30 CST">July 26, 2026</span>
   </span>
 
     
