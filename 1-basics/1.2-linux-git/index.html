@@ -478,10 +478,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#operating-systems-one-unix-family-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating systems: one Unix family, and Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-the-terminal-is-still-worth-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
         Why the terminal is still worth learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-environments-laptop-server-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computing environments: laptop, server, cluster
       
     </span>
   </a>
@@ -1741,10 +1763,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#operating-systems-one-unix-family-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating systems: one Unix family, and Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-the-terminal-is-still-worth-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
         Why the terminal is still worth learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-environments-laptop-server-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computing environments: laptop, server, cluster
       
     </span>
   </a>
@@ -1832,11 +1876,18 @@
 
 
 <h1 id="linux-git-github-basics">Linux, Git &amp; GitHub Basics<a class="headerlink" href="#linux-git-github-basics" title="Permanent link">&para;</a></h1>
-<p>The command line, git, and GitHub are the foundation of the lab's daily workflow: typed commands drive the computing on our servers, git records every change, and GitHub shares that history with other people. Sharpening these tools pays for itself; together with Python they are what all our computing and analysis runs on, and Python gets its own page in <a href="../1.3-python/">Python Basics</a>. These three are also the skills a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> leans on hardest, so the point of learning them has shifted: not memorizing commands, but reading what the agent did and judging whether it was necessary. This page picks out the basics worth learning, a few entry-level resources, and a few places to check whether the material actually stuck.</p>
+<p>The command line, git, and GitHub are the foundation of the lab's daily workflow: typed commands drive the computing on our servers, git records every change, and GitHub shares that history with other people. Sharpening these tools pays for itself; together with Python they are what all our computing and analysis runs on, and Python gets its own page in <a href="../1.3-python/">Python Basics</a>. These three are also the skills a <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agent</abbr> leans on hardest, so the point of learning them has shifted: not memorizing commands, but reading what the agent did and judging whether it was necessary. This page starts with the operating-system and computing-environment background, then picks out the basics worth learning, a few entry-level resources, and a few places to check whether the material actually stuck.</p>
+<h2 id="operating-systems-one-unix-family-and-windows">Operating systems: one Unix family, and Windows<a class="headerlink" href="#operating-systems-one-unix-family-and-windows" title="Permanent link">&para;</a></h2>
+<p>An operating system (OS) is the first program that starts when a machine boots, in charge of the hardware, the files, and every other program; the desktop you see is only its outermost skin. The three common desktop systems look like three, but they are two families. Unix was born at Bell Labs in 1969, and two of its descendants are with us: Linux, the free and open-source kernel Linus Torvalds rewrote in 1991, which now runs nearly every server, supercomputer, and Android phone, and macOS, whose Darwin kernel descends from BSD Unix and carries a proper UNIX trademark certification. Windows comes from a different bloodline, MS-DOS by way of Windows NT, and it differs from the Unix family in how paths are written (<code>C:\</code> versus <code>/</code>), in command vocabulary, and in design philosophy.</p>
+<p>This family tree decides your daily experience. Open a <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> on a Mac and you are in Unix: the commands, paths, and toolchain are nearly identical to a Linux server's, so what you practice on your laptop works unchanged on the server. The cmd and PowerShell that ship with Windows speak another language, and most commands from a bioinformatics tutorial will not run there. The good news is WSL (Windows Subsystem for Linux), Microsoft's official way to install a real Ubuntu inside Windows: open PowerShell as administrator and run <code>wsl --install</code>. And since the lab's heavy computing will sooner or later mean logging into a Linux server over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> anyway, WSL turns your own doorstep into the same language first.</p>
+<p>That is why we recommend doing command-line work on Linux or macOS, and the reasons are practical. Servers speak only the Linux dialect, so a laptop that speaks the same language means learning everything once. The vast majority of bioinformatics tools are developed and tested on Unix alone; installing them is one command there and often impossible on native Windows. There is also a historical reason: Unix was designed around small tools joined by pipes from the start, and the whole idea behind the efficiency in the next section is this family's invention.</p>
 <h2 id="why-the-terminal-is-still-worth-learning">Why the terminal is still worth learning<a class="headerlink" href="#why-the-terminal-is-still-worth-learning" title="Permanent link">&para;</a></h2>
 <p>The reasons are practical. First, most of the lab's computing does not happen on your laptop: sequencing data is too big and alignment too slow, so the work runs on servers and clusters that have no desktop and no mouse, and what greets you after you log in over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> is a <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>. Second, most bioinformatics tools have no graphical interface at all, so using them means typing commands. Third, typing is where the efficiency comes from: the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>'s idea is to chain small single-purpose tools with pipes, each one's output feeding the next, so "count how often each sequence occurs across a pile of <abbr title="The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base">FASTQ</abbr> files and list the top ten" is one line of <code>grep</code>, <code>sort</code> and <code>uniq</code>, while opening those files in an editor stops being possible once they reach tens of gigabytes. Commands saved in a script can also be rerun anytime and handed to someone else exactly as they were.</p>
 <p>Two words people mix up constantly: the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> is the window on your screen, and the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr> is the program inside it that reads what you type and runs it, usually bash or zsh. Linux is the operating system nearly all of these machines run, which is why "learning Linux" and "learning the command line" are, for our purposes, the same thing.</p>
 <p>The arrival of <abbr title="A program that runs a language model in a loop with tools, so it can read your files, run commands and edit code instead of only answering questions">coding agents</abbr> has made all this more central, not less. Agents were trained on exactly this world of <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminals</abbr> and text streams, so the command line is where they are strongest, as <a href="../1.1-llm-agents/">the previous page</a> describes. What becomes scarce is the ability to read commands rather than type them: knowing what <code>rm -rf</code> does before letting it run, and being able to tell whether the agent's one-liner answers the question you asked or some other question.</p>
+<h2 id="computing-environments-laptop-server-cluster">Computing environments: laptop, server, cluster<a class="headerlink" href="#computing-environments-laptop-server-cluster" title="Permanent link">&para;</a></h2>
+<p>The lab's computing lives on three levels. The laptop is the workbench: writing code, looking at results, small jobs, all local. The server does the heavy work, with memory and storage orders of magnitude beyond a laptop and often a GPU or two; sequencing data lives on it directly, far too big to download anyway. The cluster is a crowd of servers, dozens or hundreds of machines that a scheduler hands jobs out to; you submit yours into the queue with <code>sbatch</code> and it runs when your turn comes.</p>
+<p>All three levels share one entrance: you log in over <abbr title="A secure way to log in to another computer over the network and run commands on it, such as a remote server or compute cluster">SSH</abbr> and face a <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr>, and files move between them with command-line tools like <code>scp</code> and <code>rsync</code>. Installing software on the servers is not your job either; the lab manages environments centrally with pixi, see <a href="../../5-lab-code/5.1-routine-support/">Routine Lab Support</a>. This is why the command line comes first on this page: it is the common language of all these machines, learned once and spoken everywhere from laptop to cluster.</p>
 <h2 id="learning-the-shell">Learning the shell<a class="headerlink" href="#learning-the-shell" title="Permanent link">&para;</a></h2>
 <p>The order that works, in our experience, is files first, streams second, remote machines third. Start with moving around and looking at things: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>less</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>. Then learn to think in streams: pipes, redirection, <code>grep</code>, <code>wc</code>, and a loop for the moment you catch yourself running the same command ten times. Only then go remote with <code>ssh</code> and <code>scp</code>, which is also when the cluster stops being an abstraction. That much is honestly enough for daily lab work; a script, meaning a string of commands saved in a file for the <abbr title="The program inside the terminal that reads each command you type and runs it, such as bash or zsh">shell</abbr> to run from top to bottom, will suggest itself once you are tired of retyping.</p>
 <p>For a first course we like Data Carpentry's <a href="https://datacarpentry.github.io/shell-genomics/">shell-genomics</a>: it teaches exactly these skills inside a genomics project, on real <abbr title="The raw format sequencing machines output: four lines per read, giving the identifier, the base sequence, and a quality score for each base">FASTQ</abbr> files from an E. coli variant-calling dataset, so every command comes with a reason to care. It does expect the workshop's cloud setup, which takes some work to recreate on your own; if you'd rather start with zero preparation on your own laptop, pick Software Carpentry's <a href="https://swcarpentry.github.io/shell-novice/">shell-novice</a>, which runs locally with a small download and takes an afternoon. Either way, keep 阮一峰's <a href="https://wangdoc.com/bash/">Bash 脚本教程</a> open on the side as the Chinese reference you look things up in. If lectures suit you better than guided workshops, MIT's <a href="https://missing.csail.mit.edu/2020/course-shell/">Missing Semester</a> compresses the same ground into a few dense sessions, good for a fast review pass once you have finished one of the courses. That is the whole reading list; depth can wait until a real problem asks for it.</p>
@@ -1872,6 +1923,8 @@
 <li>码农高天's <a href="https://www.bilibili.com/video/BV19e4y1q7JJ">十分钟学会正确的 GitHub 工作流</a> (Chinese, bilibili): a professional programmer walks through the GitHub workflow open-source authors actually use to maintain code, in ten minutes.</li>
 <li><a href="https://ohmyz.sh/">Oh My Zsh</a>: a configuration framework for zsh that gets you themes, better completion, and a pile of ready-made plugins; makes the <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> much nicer to live in.</li>
 <li><a href="https://iterm2.com/">iTerm2</a>: the replacement <abbr title="The window that shows text and takes your keystrokes; the shell runs inside it">terminal</abbr> for macOS, much stronger on split panes, search, and shortcuts; on Windows the counterpart is Microsoft's own <a href="https://aka.ms/terminal">Windows Terminal</a>.</li>
+<li><a href="https://thecrashcourse.com/courses/operating-systems-crash-course-computer-science-18/">Operating Systems: Crash Course Computer Science #18</a>: thirteen minutes on why operating systems were invented at all, from batch processing and multitasking up to Unix. Episode 22 of the same series happens to be about command-line interfaces, and there is a Chinese-subtitled version on <a href="https://www.bilibili.com/video/BV1iK411g7iK/">bilibili</a>.</li>
+<li>Warren Toomey's <a href="https://spectrum.ieee.org/the-strange-birth-and-long-life-of-unix">The Strange Birth and Long Life of Unix</a>: an IEEE Spectrum long read on how a side project at Bell Labs became the foundation the industry stands on, and a good story.</li>
 </ul>
 
 
@@ -1893,7 +1946,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 01:45:21 CST">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:09:29 CST">July 26, 2026</span>
   </span>
 
     
