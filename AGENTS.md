@@ -14,7 +14,7 @@ installable packages. MkDocs + Material → GitHub Pages at
 ## Toolchain
 
 pixi only, from `pyproject.toml` + `pixi.lock`: no `requirements.txt`, no
-venv. Python 3.13; platforms `osx-arm64` and `linux-64`.
+venv. Python 3.13; platforms `osx-arm64`, `osx-64` and `linux-64`.
 
 ```bash
 pixi run docs         # live preview

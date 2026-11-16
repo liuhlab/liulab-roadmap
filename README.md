@@ -34,7 +34,7 @@ powered by [mkdocs-static-i18n](https://ultrabug.github.io/mkdocs-static-i18n/).
 ## Local preview
 
 The toolchain is managed with [pixi](https://pixi.sh) (`pyproject.toml` +
-`pixi.lock`), on Apple-silicon Macs and Linux. Install pixi, then:
+`pixi.lock`), on Macs (Apple silicon and Intel) and Linux. Install pixi, then:
 
 ```bash
 pixi install

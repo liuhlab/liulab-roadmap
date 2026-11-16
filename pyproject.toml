@@ -26,7 +26,7 @@ source = "vcs"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
-platforms = ["osx-arm64", "linux-64"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
 
 # The interpreter. `requires-python` is the floor, and conformance holds every other Python
 # version this repo declares to it.
