@@ -16,29 +16,35 @@ powered by [mkdocs-static-i18n](https://ultrabug.github.io/mkdocs-static-i18n/).
 │   ├── index.md              # English page
 │   ├── index.zh.md           # 简体中文 page (same route, .zh suffix)
 │   ├── assets/               # images and other media
-│   └── stylesheets/          # extra.css
-├── overrides/                # Material theme overrides (optional)
-├── .github/workflows/        # CI (lint + build) and Pages deploy
+│   ├── stylesheets/          # extra.css
+│   ├── adr/                  # decision records (not published)
+│   └── agents/               # rules for coding agents (not published)
+├── hooks/glossary.py         # build hook: glossary hover tooltips
+├── includes/                 # glossary terms, English and 中文
+├── scripts/                  # the check runner and conformance check
+├── styles/Lab/               # vale writing rules
+├── .github/workflows/        # CI (the checks + build) and Pages deploy
 ├── mkdocs.yml                # site configuration
-├── pixi.toml                 # dev toolchain (pixi)
-├── .markdownlint.yaml        # Markdown lint rules
-└── .gitignore
+├── pyproject.toml            # dev toolchain (pixi) and tool settings
+├── pixi.lock                 # exact versions of every tool
+├── .markdownlint-cli2.yaml   # Markdown lint rules
+└── .vale.ini                 # which writing rules apply to which files
 ```
 
 ## Local preview
 
-The toolchain is managed with [pixi](https://pixi.sh) (`pixi.toml` +
-`pixi.lock`). Install pixi, then:
+The toolchain is managed with [pixi](https://pixi.sh) (`pyproject.toml` +
+`pixi.lock`), on Apple-silicon Macs and Linux. Install pixi, then:
 
 ```bash
 pixi install
-pixi run serve      # live-reloading preview at http://127.0.0.1:8000
-pixi run build      # strict build into site/ (mirrors CI)
-pixi run lint       # markdownlint over docs/
+pixi run docs         # live-reloading preview at http://127.0.0.1:8000
+pixi run docs-build   # strict build into site/ (mirrors CI)
+pixi run check        # every check: lint, types, writing rules, conformance
 ```
 
-CI uses the same `pixi.toml`, so a clean `pixi run build` locally means CI
-should pass too.
+CI runs the same tasks from the same lock file. So when `pixi run check` and
+`pixi run docs-build` pass locally, CI should pass too.
 
 ## Writing bilingual content
 
@@ -55,12 +61,14 @@ labels are set via `nav_translations` in the same file.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
-and publishes it to GitHub Pages at <https://liuhlab.github.io/liulab-roadmap/>.
-Pages is configured with **Source: GitHub Actions** (a one-time repo setting).
+Pushing to `main` triggers `.github/workflows/deploy.yml`. It builds the site and
+force-pushes it to the `gh-pages` branch, which GitHub Pages serves at
+<https://liuhlab.github.io/liulab-roadmap/>. In the repo's Pages settings, the
+source is **Deploy from a branch**, branch `gh-pages`, folder `/ (root)`.
 
 ## Contributing
 
 1. Create a branch and add or edit Markdown under `docs/`.
-2. Run `pixi run lint` and `pixi run build` locally.
-3. Open a pull request — CI runs markdownlint and a strict build.
+2. Run `pixi run check` and `pixi run docs-build` locally.
+3. Open a pull request as a draft, then mark it ready for review. CI runs the
+   checks and a strict build once it is ready.
