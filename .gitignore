@@ -29,3 +29,12 @@ Thumbs.db
 
 # Playwright MCP scratch output
 .playwright-mcp/
+
+# Agent products. Never a blanket `/.claude/`: a repo's skill symlinks under `.claude/skills/`
+# and `.agents/skills/` are tracked. So this names the two machine-local files inside
+# `.claude/` and nothing else.
+.claude/settings.local.json
+.claude/worktrees/
+# Installer output for other agents. Nobody's clone needs another machine's copy.
+/.codex/
+/.gemini/
