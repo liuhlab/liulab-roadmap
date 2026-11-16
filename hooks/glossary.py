@@ -20,6 +20,7 @@ from __future__ import annotations
 import re
 from html import escape
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 GLOSSARIES = {
@@ -53,9 +54,9 @@ _terms: dict[str, dict[str, str]] = {}
 
 
 def _pattern_for(term: str) -> str:
-    """Match ``term``, plus an English plural ``s`` where that makes sense.
+    r"""Match ``term``, plus an English plural ``s`` where that makes sense.
 
-    Deliberately lookarounds over ``\\b``: a word boundary never fires between
+    Deliberately lookarounds over ``\b``: a word boundary never fires between
     a CJK character and a Latin one, which is the bug this hook exists to fix.
     """
     left = r"(?<![A-Za-z0-9_])" if _ASCII_WORD.match(term[0]) else ""
@@ -63,7 +64,9 @@ def _pattern_for(term: str) -> str:
     return f"{left}{re.escape(term)}{right}"
 
 
-def on_config(config):
+# The mkdocs objects are `Any`: the gate's environment holds no mkdocs to type them with.
+def on_config(config: Any) -> Any:
+    """Load both glossaries once per build, longest term first."""
     for locale, path in GLOSSARIES.items():
         if not path.exists():
             raise FileNotFoundError(f"glossary hook: missing {path}")
@@ -88,7 +91,8 @@ def _wrap(text: str, terms: dict[str, str]) -> str:
     return pattern.sub(repl, text)
 
 
-def on_page_markdown(markdown, page, config, files):
+def on_page_markdown(markdown: str, page: Any, config: Any, files: Any) -> str:
+    """Wrap glossary terms in the page's own language, outside code, links, HTML and headings."""
     locale = "zh" if page.file.src_uri.endswith(".zh.md") else "en"
     terms = _terms.get(locale, {})
     out, pos = [], 0
