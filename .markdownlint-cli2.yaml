@@ -1,0 +1,35 @@
+# markdownlint reads structure; vale reads language. Both are steps of `check-static`.
+#
+# There is deliberately no `ignores:` list. `gitignore: true` delegates to the one exclusion
+# list the repo already has, so `.pixi/` and `site/` are skipped without anything new to keep
+# in sync. It is load-bearing: without it the glob below walks `.pixi/envs/` and lints the
+# markdown shipped inside node_modules.
+gitignore: true
+
+# The glob lives here rather than on the pixi task line so that the file set does not
+# depend on whether the task shell expands `**` before markdownlint-cli2 sees it.
+globs:
+  - "**/*.md"
+
+config:
+  default: true
+  # Scoped, not disabled. A hard tab in prose is an accident; inside a fenced block it is the
+  # content.
+  MD010:
+    code_blocks: false
+  # Nothing owns line length in prose, and Chinese has no spaces to wrap on.
+  MD013: false
+  # Scoped, not disabled: a heading may repeat under different parents.
+  MD024:
+    siblings_only: true
+  # Ordered lists count up, 1. 2. 3.
+  MD029:
+    style: ordered
+  # Inline HTML is part of the site: figures, `<abbr>`, Material's grid cards.
+  MD033: false
+  # A page may open with front matter or an include rather than a top-level heading.
+  MD041: false
+  # An admonition body (`!!! note`, `??? tip`) is indented four spaces by design. markdownlint
+  # has no notion of admonitions, so it reads a body's second paragraph as an indented code
+  # block, and on a page that also has fenced blocks the consistent-style default fails it.
+  MD046: false

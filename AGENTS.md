@@ -13,14 +13,21 @@ installable packages. MkDocs + Material → GitHub Pages at
 
 ## Toolchain
 
-pixi is the single source of truth (`pixi.toml` + `pixi.lock`) — no
-`requirements.txt`, no venv.
+pixi only, from `pyproject.toml` + `pixi.lock`: no `requirements.txt`, no
+venv. Python 3.13; platforms `osx-arm64`, `osx-64` and `linux-64`.
 
 ```bash
-pixi run serve   # live preview
-pixi run build   # strict build; CI runs this — do it before calling a change done
-pixi run lint    # markdownlint
+pixi run docs         # live preview
+pixi run docs-build   # strict build of both languages
+pixi run check        # ruff, pyright, vale, markdownlint, conformance
 ```
+
+`check` and `docs-build` must both pass before a change is done. `check`
+reports every failing step at once, so read to the bottom. Open a pull request
+as a draft and mark it ready to run CI once. A merge to `main` deploys the site.
+
+The version is the newest git tag, CalVer `vYYYY.M.PATCH`, read by hatch-vcs.
+Never write a version into a file.
 
 A clean build says nothing about how a page *looks*. For anything visual
 (Mermaid, CSS figures, tooltips) serve `site/` on a port and check it in a
@@ -100,15 +107,24 @@ not an entry. Mermaid fences work. Citations (`mkdocs-bibtex`) not yet wired up.
 
 ## Gotchas
 
-- Don't re-add `navigation.instant` — it breaks the language switcher.
-- Material lazy-loads Mermaid from unpkg; we vendor it (`extra_javascript`,
-  `defer`) so readers behind the GFW see diagrams. Don't drop it.
+Each decision behind these is an ADR in `docs/adr/`; read it before changing the area.
+
+- Don't re-add `navigation.instant`: it breaks the language switcher (0001).
+- Keep `git-revision-date-localized` after `i18n` in `plugins:`, and
+  `fetch-depth: 0` on every CI checkout that builds (0001).
+- Don't drop the vendored Mermaid: readers behind the GFW lose every diagram (0002).
+- After touching `hooks/glossary.py`, compare built pages with a build from
+  before the change (0003).
 - Mermaid ignores `direction` inside a subgraph that has edges to another
   subgraph. Lay figures out as a spine plus fan-out instead.
-- `mkdocs-static-i18n` is PyPI-only → `[pypi-dependencies]` in `pixi.toml`.
-  Same for `git-revision-date-localized` (conda-forge froze at 1.2.9), which
-  must also sit *after* `i18n` in `plugins:` or the build errors out.
-- The page footer date comes from `git log` per file, so CI checkouts need
-  `fetch-depth: 0`. A shallow clone dates every page alike and still exits 0.
-- Empty dirs need a `.gitkeep`, or `custom_dir`-style config breaks in CI.
-- `pixi.toml` version uses CalVer (`YYYY.M.D`).
+- `docs/adr/` and `docs/agents/` are agent-facing: never in `nav:`, never built
+  (`exclude_docs`), with `search: exclude: true` front matter.
+
+## Read next
+
+| When | Read |
+| --- | --- |
+| Before changing config, the hook or a workflow | `GLOSSARY.md`, then the ADRs on that area |
+| Writing anything | The writing guide above, then `docs/agents/writing.md` for the gate's rules |
+
+The issue tracker, triage labels and domain docs are the lab defaults.

@@ -1,0 +1,147 @@
+# ============================== project ==============================
+
+# A docs site, not a package: nothing installs this project. The table is here because
+# pixi, conformance and hatch-vcs all read it.
+[project]
+name = "liulab-roadmap"
+description = "Curated roadmaps, tutorials, and learning materials for the Liu Lab."
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Liu Lab" }]
+# hatch-vcs reads the newest git tag. Never add a `version` key.
+dynamic = ["version"]
+dependencies = []
+
+# ============================== build ==============================
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+# No `fallback-version`: that is a hand-written version string.
+[tool.hatch.version]
+source = "vcs"
+
+# ============================== pixi ==============================
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+# The interpreter. `requires-python` is the floor, and conformance holds every other Python
+# version this repo declares to it.
+[tool.pixi.dependencies]
+python = "3.13.*"
+ruff = "*"
+# Exact: Pylance is pyright, so the editor and CI must give one verdict.
+pyright = "==1.1.411"
+# Exact: the jargon map and the grade-11 number were measured against this version.
+vale = "3.19.0.*"
+markdownlint-cli2 = "*"
+# markdownlint-cli2 asks for any nodejs, and on linux-64 the solver picks a 2019 build it cannot
+# run on. The floor is the oldest Node markdownlint-cli2 supports.
+nodejs = ">=20"
+# For conformance, which parses mkdocs.yml and runs in `default`.
+pyyaml = "*"
+
+# mkdocs-material, not the template's zensical: this site needs the i18n plugin, the
+# revision-date plugin and a build hook. See docs/adr/0001-docs-site-on-mkdocs-material.md.
+[tool.pixi.feature.docs.dependencies]
+mkdocs-material = ">=9.5"
+
+# Not on conda-forge, or stale there, so from PyPI.
+[tool.pixi.feature.docs.pypi-dependencies]
+mkdocs-static-i18n = ">=1.2"
+# conda-forge's feedstock stalled at 1.2.9; >=1.5.0 has the babel locale fix the i18n plugin
+# needs. It reads dates through GitPython, which needs `git` on PATH.
+mkdocs-git-revision-date-localized-plugin = ">=1.5.0"
+
+# On the feature, so these resolve in the `docs` environment with no `-e` flag.
+# `serve` ignores `--strict`, hence its absence.
+[tool.pixi.feature.docs.tasks]
+docs = "mkdocs serve"
+docs-build = "mkdocs build --strict"
+# Builds, then force-pushes `site/` to the `gh-pages` branch. Run by deploy.yml on `main`.
+docs-deploy = "mkdocs gh-deploy --force --strict"
+
+# `default` holds the gate and not the site builder, so `pixi run check` never installs it.
+[tool.pixi.environments]
+default = { solve-group = "default" }
+docs = { features = ["docs"], solve-group = "default" }
+
+[tool.pixi.tasks]
+lint = "ruff check ."
+fmt = "ruff format ."
+fmt-check = "ruff format --check ."
+typecheck = "pyright"
+# `.`, never an absolute path: an absolute path matches no `.vale.ini` section and exits 0.
+# The globs stop vale walking trees it never lints.
+vale = "vale --glob='!{.pixi,site,dist,build}/**' ."
+markdownlint = "markdownlint-cli2"
+conformance = "python scripts/conformance.py"
+# The static step list lives here and nowhere else; `check.sh` takes it as arguments.
+check-static = "bash scripts/check.sh lint fmt-check typecheck vale markdownlint conformance"
+check = { depends-on = ["check-static"] }
+
+# ============================== ruff ==============================
+
+[tool.ruff]
+line-length = 100
+src = ["hooks", "scripts"]
+# No `target-version`: ruff infers it from `requires-python`.
+extend-exclude = [".pixi", "site", "build", "dist"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "PT",  # flake8-pytest-style
+    "PTH", # flake8-use-pathlib
+    "N",   # pep8-naming
+    "D",   # pydocstyle (numpy convention, configured below)
+    "RUF", # ruff-specific
+]
+# E501: the formatter owns line length. D203/D213: incompatible with D211/D212.
+ignore = ["E501", "D203", "D213"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+# ============================== pyright ==============================
+
+[tool.pyright]
+# `hooks` runs inside every site build; `scripts` runs in the gate.
+include = ["hooks", "scripts"]
+exclude = ["**/__pycache__", "**/.pixi"]
+venvPath = ".pixi/envs"
+venv = "default"
+# No `pythonVersion`: taken from the interpreter in the environment above.
+typeCheckingMode = "standard"
+# Not redundant: `standard` does not check that a parameter is annotated at all. `Any`
+# satisfies it, so the fix is always in the file you are editing.
+reportMissingParameterType = "error"
+# Deliberately NOT `reportUnknownParameterType`: it also fails annotated parameters and
+# inferred return types whose types an untyped dependency owns. Not a bar a lab repo can meet.
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = "none"
+
+# ============================== liulab ==============================
+# Read by `scripts/conformance.py`; its docstring has the rules.
+
+# The declared agent-facing set. Keys are path prefixes matched against `git ls-files`, not
+# globs; a trailing `/` matches a directory. Values name the Vale Length rule, or `false`.
+[tool.liulab.agent-docs]
+"AGENTS.md" = "LengthDoc"
+"GLOSSARY.md" = false         # capped per entry by conformance, not per file
+"docs/agents/" = "LengthDoc"
+"docs/adr/" = "LengthAdr"
+
+# Keyed by rule name, value the reason. Per-rule, never per-file; no expiry; printed on every
+# run. `placeholder-rename` refuses to be waived.
+[tool.liulab.waived]
