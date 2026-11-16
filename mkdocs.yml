@@ -17,10 +17,23 @@ repo_url: https://github.com/liuhlab/liulab-roadmap
 repo_name: liuhlab/liulab-roadmap
 edit_uri: edit/main/docs/
 
+# Agent-facing pages: decision records and agent rules. They live under docs/ because the lab's
+# tools look for them there, and are never built, so neither language's site publishes them.
+# Their `search: exclude: true` front matter stays: conformance checks for it.
+exclude_docs: |
+  adr/
+  agents/
+
+# A strict build fails on a link to a missing page (mkdocs' default) and, with `anchors: warn`,
+# on a link to a missing heading anchor, which mkdocs only logs by default.
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+
 theme:
   name: material
   language: en
-  custom_dir: overrides
   features:
     # NOTE: navigation.instant is intentionally omitted — it breaks the
     # mkdocs-static-i18n language switcher's contextual links.
